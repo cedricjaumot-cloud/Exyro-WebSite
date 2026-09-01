@@ -8,6 +8,7 @@
 <link rel="icon" href="../assets/favicon-light.jpg">
 <link rel="alternate" hreflang="fr" href="https://www.exyro.be/">
 <link rel="alternate" hreflang="nl" href="https://www.exyro.be/nl/">
+<link rel="alternate" hreflang="en" href="https://www.exyro.be/en/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -48,6 +49,8 @@
   .lang-switch span{color:#4A5A70;}
   .navcta{background:var(--signal);color:#fff;padding:11px 22px;border-radius:999px;font-size:13px;font-weight:700;}
   .navcta:hover{background:#4a92ec;}
+  .navcta-ghost{background:transparent;border:1px solid rgba(255,255,255,.28);color:#fff;}
+  .navcta-ghost:hover{background:rgba(255,255,255,.08);border-color:#fff;}
 
   /* ---------- Hero ---------- */
   .hero{
@@ -244,13 +247,22 @@
 
   footer{background:var(--ardoise);padding:60px 0 40px;color:#C9D3E0;}
   footer .wrap{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:24px;}
-  footer .fcol{font-size:13px;}
+  footer .fcol{font-size:13px;max-width:220px;}
   footer .fcol a{display:block;margin-top:8px;color:#AEBBCE;}
   footer .fcol a:hover{color:#fff;}
-  .fine{font-size:12px;color:#7C8CA3;margin-top:40px;border-top:1px solid rgba(255,255,255,.08);padding-top:20px;}
+  footer .fcol-text{display:block;margin-top:8px;color:#AEBBCE;line-height:1.6;}
+  .legal-links{
+    display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:36px;padding-top:20px;
+    border-top:1px solid rgba(255,255,255,.08);
+  }
+  .legal-links a{font-size:12px;color:#8393A8;}
+  .legal-links a:hover{color:#fff;}
+  .fine{font-size:12px;color:#7C8CA3;margin-top:20px;padding-top:0;}
 
   @media (max-width:900px){
     .navlinks{display:none;}
+    .navcta-ghost{display:none;}
+    .nav-right{gap:12px;}
     .pain-grid{grid-template-columns:1fr;}
     .solution-row, .solution-row.reverse{grid-template-columns:1fr;}
     .solution-row.reverse .img-col, .solution-row.reverse .text-col{order:initial;}
@@ -281,8 +293,9 @@
     </div>
     <div class="nav-right">
       <div class="lang-switch">
-        <a href="../index.html">FR</a><span>/</span><a href="index.html" class="active">NL</a>
+        <a href="../index.html">FR</a><span>/</span><a href="index.html" class="active">NL</a><span>/</span><a href="../en/index.html">EN</a>
       </div>
+      <a href="https://app.exyro.be/nl/my" target="_blank" rel="noopener" class="navcta navcta-ghost">Klantenzone</a>
       <a href="#contact" class="navcta">Mijn pand uitbesteden</a>
     </div>
   </nav>
@@ -551,12 +564,26 @@
       <a href="#voordelen">Waarom uitbesteden</a>
       <a href="#oplossing">Hoe het werkt</a>
       <a href="#assistent">AI-assistent</a>
+      <a href="https://app.exyro.be/nl/my" target="_blank" rel="noopener">Klantenzone</a>
     </div>
     <div class="fcol">
       <strong style="color:#fff">Contact</strong>
       <a href="mailto:beheer@exyro.be">beheer@exyro.be</a>
-      <a href="https://www.exyro.be">www.exyro.be</a>
+      <a href="tel:+3292740361">+32 9 274 03 61</a>
+      <span class="fcol-text">Schoonzichtstraat 21<br>9051 Sint-Denijs-Westrem</span>
     </div>
+    <div class="fcol">
+      <strong style="color:#fff">Wettelijke informatie</strong>
+      <span class="fcol-text">EXYRO SA, KBO/BTW BE0479.544.442<br>Erkend BIV nr. 510.120, BA-verzekering afgesloten</span>
+      <a href="https://www.ipi.be" target="_blank" rel="noopener">BIV-bemiddeling</a>
+    </div>
+  </div>
+  <div class="wrap legal-links">
+    <a href="legal/mentions-legales.html">Wettelijke vermeldingen</a>
+    <a href="legal/confidentialite.html">Privacybeleid</a>
+    <a href="legal/cookies.html">Cookiebeleid</a>
+    <a href="legal/cgv.html">Algemene voorwaarden</a>
+    <a href="legal/disclaimer.html">Disclaimer</a>
   </div>
   <div class="wrap fine">MANAGE. PROTECT. PERFORM. - © EXYRO, Property Management.</div>
 </footer>
