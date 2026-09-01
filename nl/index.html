@@ -38,6 +38,7 @@
   header.solid{background:rgba(30,45,66,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.08);}
   nav.wrap{display:flex;align-items:center;justify-content:space-between;height:76px;}
   .logo{display:flex;align-items:center;gap:10px;}
+  .logo-img{height:34px;width:auto;display:block;}
   .logo .wordmark{font-size:17px;font-weight:800;letter-spacing:.14em;color:#fff;}
   .navlinks{display:flex;gap:34px;font-size:13.5px;font-weight:600;color:#C9D3E0;}
   .navlinks a:hover{color:#fff;}
@@ -194,6 +195,27 @@
   .text-col li{font-size:14px;color:var(--ardoise);display:flex;gap:10px;align-items:flex-start;}
   .text-col li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--signal);margin-top:7px;flex-shrink:0;}
 
+  /* ---------- Espace client (paliers) ---------- */
+  .tiers-section{background:var(--ciel);}
+  .tiers-badge{
+    display:inline-flex;align-items:center;gap:6px;background:rgba(44,123,229,.12);color:var(--signal);
+    font-size:11.5px;font-weight:700;letter-spacing:.04em;padding:5px 12px;border-radius:999px;margin-bottom:18px;
+  }
+  .tiers-badge::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--signal);}
+  .tiers-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:44px;}
+  .tier-card{
+    background:var(--white);border:1px solid rgba(30,45,66,.08);border-radius:16px;
+    padding:32px 28px;display:flex;flex-direction:column;
+  }
+  .tier-card.featured{border-color:var(--signal);box-shadow:0 12px 32px rgba(44,123,229,.14);}
+  .tier-name{font-family:'Montserrat',sans-serif;font-weight:800;font-size:13px;letter-spacing:.14em;color:var(--signal);margin-bottom:10px;}
+  .tier-tagline{font-size:15px;font-weight:700;color:var(--ardoise);margin-bottom:18px;line-height:1.4;}
+  .tier-list{list-style:none;padding:0;margin:0 0 20px;display:flex;flex-direction:column;gap:10px;flex:1;}
+  .tier-list li{font-size:13.5px;color:var(--acier);display:flex;gap:9px;align-items:flex-start;}
+  .tier-list li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--signal);margin-top:6px;flex-shrink:0;}
+  .tier-list li.included{color:#96A2B3;font-style:italic;}
+  .tier-list li.included::before{background:#C9D3E0;}
+
   /* ---------- Stats strip ---------- */
   .stats-strip{background:var(--ciel);}
   .stats-strip .wrap{display:grid;grid-template-columns:repeat(4,1fr);padding:56px 24px;}
@@ -297,6 +319,8 @@
   .fine{font-size:12px;color:#7C8CA3;margin-top:20px;padding-top:0;}
 
   @media (max-width:900px){
+    .logo-img{height:26px;}
+    .tiers-grid{grid-template-columns:1fr;}
     .navlinks{display:none;}
     .navcta-ghost{display:none;}
     .lang-switch{display:none;}
@@ -323,11 +347,7 @@
 <header id="siteHeader">
   <nav class="wrap">
     <a href="#top" class="logo" aria-label="EXYRO - home">
-      <svg viewBox="0 0 62 62" width="26" height="26" xmlns="http://www.w3.org/2000/svg">
-        <line x1="8" y1="8" x2="46" y2="54" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
-        <line x1="46" y1="8" x2="8" y2="54" stroke="#2C7BE5" stroke-width="3" stroke-linecap="round"/>
-      </svg>
-      <span class="wordmark">EXYRO</span>
+      <img src="../assets/EXYRO_logo_dark.svg" alt="EXYRO - Property Management" class="logo-img">
     </a>
     <div class="navlinks">
       <a href="#voordelen">Waarom uitbesteden</a>
@@ -511,6 +531,47 @@
   </div>
 </section>
 
+<section class="tiers-section" id="klantenzone">
+  <div class="wrap">
+    <div class="pain-head" style="max-width:680px;">
+      <span class="section-eyebrow" style="color:var(--signal);">Uw klantenzone</span>
+      <h2 style="color:var(--ardoise);">Stuur uw vermogen, niet enkel uw dossier.</h2>
+      <p style="color:var(--acier);font-size:15.5px;margin-top:14px;">De gegevens van uw panden beheerd door EXYRO voeden rechtstreeks uw klantenzone: vrije verkoopwaarde van uw pand (VVGG), schulden, inkomsten, kosten, ratio's en rendement, met een maandelijkse financiële opvolging en projecties in de tijd: vandaag, morgen, bij pensionering.</p>
+    </div>
+
+    <div class="tiers-grid">
+      <div class="tier-card">
+        <span class="tier-name">MANAGE</span>
+        <p class="tier-tagline">Inbegrepen zodra u een pand toevertrouwt aan EXYRO.</p>
+        <ul class="tier-list">
+          <li>Realtime overzicht van uw panden beheerd door EXYRO</li>
+          <li>VVGG, schulden, inkomsten en kosten</li>
+          <li>Ratio's en huurrendement</li>
+          <li>Langetermijnprojecties, tot aan pensionering</li>
+        </ul>
+      </div>
+      <div class="tier-card featured">
+        <span class="tier-name">PROTECT</span>
+        <p class="tier-tagline">Voeg uw persoonlijke situatie toe voor een volledig overzicht.</p>
+        <ul class="tier-list">
+          <li class="included">Alles van MANAGE, plus:</li>
+          <li>Uw persoonlijke vermogensgegevens</li>
+          <li>Maandelijkse financiële opvolging</li>
+        </ul>
+      </div>
+      <div class="tier-card">
+        <span class="tier-name">PERFORM</span>
+        <p class="tier-tagline">Stuur uw volledige vermogen, ook buiten EXYRO.</p>
+        <ul class="tier-list">
+          <li class="included">Alles van PROTECT, plus:</li>
+          <li>Uw andere panden, elders of door uzelf beheerd</li>
+          <li>Geconsolideerd overzicht van uw volledige vastgoedvermogen</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="stats-strip" id="cijfers">
   <div class="wrap">
     <div class="stat"><div class="num">1 100+</div><div class="label">Actieve huurcontracten</div></div>
@@ -649,11 +710,7 @@
   </svg>
   <div class="wrap">
     <div class="logo">
-      <svg viewBox="0 0 62 62" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
-        <line x1="8" y1="8" x2="46" y2="54" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
-        <line x1="46" y1="8" x2="8" y2="54" stroke="#2C7BE5" stroke-width="3" stroke-linecap="round"/>
-      </svg>
-      <span class="wordmark" style="font-size:15px;color:#fff;">EXYRO</span>
+      <img src="../assets/EXYRO_logo_dark.svg" alt="EXYRO - Property Management" class="logo-img">
     </div>
     <div class="fcol">
       <strong style="color:#fff">Navigatie</strong>
