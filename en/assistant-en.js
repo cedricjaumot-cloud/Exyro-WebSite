@@ -94,6 +94,15 @@ const KNOWLEDGE_BASE = [
       "Managing one rental property alone is manageable. Managing 5, 10 or 30 properties at once, with leases on different dates, indexations to track, inspection reports to schedule and claims to handle, quickly becomes a part-time job, or more.",
     pitch:
       "That's exactly why EXYRO exists: a single point of contact for your entire portfolio, whatever its size, with the same rigour applied to every property."
+  },
+  {
+    id: "renovation",
+    keywords: ["renovation", "renovate", "improve my property", "value creation", "maintenance work"],
+    question: "Should I renovate my rental property?",
+    answer:
+      "Not always, and that's exactly the calculation that matters: an investment only makes sense if it pays off in both the rent and the property's value. Spending €50,000 on works that only raise the rent by €100/month and the value by €35,000 is often less profitable than selling as-is. Conversely, a targeted renovation (kitchen, bathroom, energy performance) can add far more value than it costs.",
+    pitch:
+      "This is exactly what EXYRO costs out before recommending any work: expected impact on rent, expected impact on resale value, and a decision that always stays yours."
   }
 ];
 

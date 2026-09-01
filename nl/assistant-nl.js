@@ -94,6 +94,15 @@ const KNOWLEDGE_BASE = [
       "Eén verhuurd pand alleen beheren is haalbaar. 5, 10 of 30 panden tegelijk beheren, met huurcontracten op verschillende data, indexeringen om op te volgen, plaatsbeschrijvingen om te plannen en schadegevallen om te behandelen, wordt al snel een deeltijdse job, of meer.",
     pitch:
       "Precies daarom bestaat EXYRO: één aanspreekpunt voor uw volledige portefeuille, ongeacht de omvang, met dezelfde nauwkeurigheid voor elk pand."
+  },
+  {
+    id: "waardevermeerdering",
+    keywords: ["werken", "renovatie", "verbouwing", "waardevermeerdering", "onderhoud"],
+    question: "Moet ik werken laten uitvoeren aan mijn verhuurd pand?",
+    answer:
+      "Niet altijd, en net daar zit de kunst van het rekenwerk: een investering is enkel zinvol als ze zich zowel in de huur als in de waarde van het pand terugbetaalt. 50.000 € aan werken die de huur maar met 100 €/maand verhogen en de waarde maar met 35.000 €, is vaak minder rendabel dan verkopen in de huidige staat. Omgekeerd kan een gerichte renovatie (keuken, badkamer, energieprestatie) veel meer waarde opleveren dan ze kost.",
+    pitch:
+      "Dat is precies wat EXYRO becijfert vóór we een ingreep voorstellen: verwachte impact op de huur, verwachte impact op de verkoopwaarde, en een beslissing die altijd de uwe blijft."
   }
 ];
 

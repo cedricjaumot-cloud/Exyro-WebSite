@@ -105,6 +105,15 @@ const KNOWLEDGE_BASE = [
       "Gérer un bien locatif seul est faisable. Gérer 5, 10 ou 30 biens en parallèle, avec des baux à des dates différentes, des indexations à suivre, des états des lieux à planifier et des sinistres à traiter, devient rapidement un travail à temps partiel, voire plus.",
     pitch:
       "C'est justement pour ça qu'EXYRO existe : un seul interlocuteur pour tout votre portefeuille, quelle que soit sa taille, avec la même rigueur sur chaque bien."
+  },
+  {
+    id: "valorisation",
+    keywords: ["travaux", "rénovation", "renovation", "valorisation", "améliorer mon bien", "entretien"],
+    question: "Faut-il faire des travaux dans mon bien loué ?",
+    answer:
+      "Pas toujours, et c'est tout l'art du calcul : un investissement n'a de sens que s'il se retrouve à la fois dans le loyer et dans la valeur du bien. Faire 50 000 € de travaux qui n'augmentent le loyer que de 100 €/mois et la valeur du bien que de 35 000 €, c'est souvent moins rentable que de vendre en l'état. À l'inverse, une rénovation ciblée (cuisine, salle de bain, performance énergétique) peut valoriser bien plus que son coût.",
+    pitch:
+      "C'est exactement ce qu'EXYRO chiffre avant de vous proposer une intervention : impact attendu sur le loyer, impact attendu sur la valeur de revente, et une décision qui reste toujours la vôtre."
   }
 ];
 
