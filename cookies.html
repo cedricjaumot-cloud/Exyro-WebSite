@@ -23,6 +23,11 @@
   li{font-size:14.5px;color:var(--acier);margin-bottom:6px;}
   a{color:var(--signal);}
   .gap-note{background:var(--ciel);border-left:3px solid var(--signal);padding:12px 16px;border-radius:6px;font-size:13px;color:var(--acier);margin:16px 0;}
+  table.cookie-table{width:100%;border-collapse:collapse;margin:14px 0 20px;font-size:13.5px;}
+  table.cookie-table th{text-align:left;color:var(--ardoise);font-weight:700;padding:10px 12px;border-bottom:2px solid var(--ciel);}
+  table.cookie-table td{padding:10px 12px;border-bottom:1px solid var(--ciel);color:var(--acier);}
+  table.cookie-table td.name{color:var(--ardoise);font-weight:600;}
+  .tag{display:inline-block;background:var(--ciel);color:var(--signal);font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px;margin-left:6px;}
   a.back{display:inline-block;margin-top:50px;font-size:13px;color:var(--signal);text-decoration:none;}
 </style>
 </head>
@@ -49,9 +54,21 @@
 
   <h2>Quels cookies sont utilisés sur ce site web ?</h2>
   <h3>Cookies fonctionnels</h3>
-  <div class="gap-note">Le détail des cookies fonctionnels (nom, finalité, durée de conservation) n'a pas été retrouvé dans le contenu de l'ancien site. À compléter avant publication, idéalement sous forme de tableau.</div>
+  <p>Ces cookies sont nécessaires au bon fonctionnement du site web. Vous ne pouvez pas les refuser si vous souhaitez utiliser le site.</p>
+  <table class="cookie-table">
+    <tr><th>Nom</th><th>Délai d'expiration</th><th>Objectif</th></tr>
+    <tr><td class="name">waxlang</td><td>12 mois</td><td>Se souvient de la langue utilisée sur le site</td></tr>
+  </table>
+
   <h3>Cookies analytiques</h3>
-  <div class="gap-note">Le détail des cookies analytiques (nom, finalité, durée de conservation) n'a pas été retrouvé dans le contenu de l'ancien site. À compléter avant publication, idéalement sous forme de tableau.</div>
+  <p>Nous utilisons Google Analytics à des fins d'analyse. Cet outil enregistre des cookies permettant de mesurer le trafic et les visites. Ces données sont utilisées uniquement pour améliorer le contenu du site. Votre consentement préalable est requis pour l'utilisation de ces cookies analytiques.</p>
+  <table class="cookie-table">
+    <tr><th>Nom</th><th>Délai d'expiration</th><th>Objectif</th></tr>
+    <tr><td class="name">_ga<span class="tag">Google Analytics</span></td><td>13 mois</td><td>Mesure et analyse les visites</td></tr>
+    <tr><td class="name">_gat-UA-****<span class="tag">Google Analytics</span></td><td>13 mois</td><td>Mesure et analyse les visites</td></tr>
+    <tr><td class="name">_gid<span class="tag">Google Analytics</span></td><td>13 mois</td><td>Mesure et analyse les visites</td></tr>
+    <tr><td class="name">_atuvc</td><td>24 mois</td><td>Enregistre le nombre de partages d'une page</td></tr>
+  </table>
 
   <h2>Consentement à notre utilisation de cookies</h2>
   <p>La plupart des navigateurs acceptent automatiquement les cookies. Vous pouvez modifier les paramètres de votre navigateur pour être averti lors de l'envoi d'un cookie, ou pour refuser les cookies. Pour plus d'informations, consultez :</p>
