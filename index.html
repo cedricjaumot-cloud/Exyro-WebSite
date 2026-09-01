@@ -93,8 +93,15 @@
   }
   .scroll-cue span{width:1px;height:34px;background:linear-gradient(#8EB8F5,transparent);}
 
+  /* ---------- X watermark (signature de marque en filigrane) ---------- */
+  .x-watermark{
+    position:absolute;pointer-events:none;z-index:-1;
+    right:-40px;bottom:-40px;width:340px;height:340px;opacity:1;
+  }
+  .x-watermark line{stroke:#fff;stroke-width:2;stroke-linecap:round;opacity:.06;}
+
   /* ---------- Pain band ---------- */
-  .pain{background:var(--ardoise);color:#fff;padding:100px 0;}
+  .pain{background:var(--ardoise);color:#fff;padding:100px 0;position:relative;overflow:hidden;z-index:0;}
   .pain-head{max-width:640px;margin-bottom:56px;}
   .pain-head .section-eyebrow{color:var(--signal);}
   .pain-head h2{font-size:clamp(28px,4vw,42px);font-weight:800;line-height:1.15;}
@@ -181,7 +188,7 @@
   .testi-card .who-role{font-size:12px;color:var(--acier);}
 
   /* ---------- AI Assistant ---------- */
-  .ai-section{background:var(--ardoise);}
+  .ai-section{background:var(--ardoise);position:relative;overflow:hidden;z-index:0;}
   .ai-shell{
     display:grid;grid-template-columns:1fr 1.1fr;gap:0;background:#243247;border-radius:20px;overflow:hidden;
   }
@@ -245,7 +252,7 @@
   .final-cta h2{font-size:clamp(32px,5.4vw,58px);font-weight:800;line-height:1.08;max-width:18ch;margin:0 auto 24px;}
   .final-cta p{color:#C9D3E0;font-size:16px;margin-bottom:40px;}
 
-  footer{background:var(--ardoise);padding:60px 0 40px;color:#C9D3E0;}
+  footer{background:var(--ardoise);padding:60px 0 40px;color:#C9D3E0;position:relative;overflow:hidden;z-index:0;}
   footer .wrap{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:24px;}
   footer .fcol{font-size:13px;max-width:220px;}
   footer .fcol a{display:block;margin-top:8px;color:#AEBBCE;}
@@ -316,6 +323,10 @@
 </section>
 
 <section class="pain" id="avantages">
+  <svg class="x-watermark" viewBox="0 0 340 340" xmlns="http://www.w3.org/2000/svg">
+    <line x1="30" y1="30" x2="310" y2="310"/>
+    <line x1="310" y1="30" x2="30" y2="310"/>
+  </svg>
   <div class="wrap">
     <div class="pain-head">
       <span class="section-eyebrow">Ce que vous gagnez</span>
@@ -473,6 +484,10 @@
 </section>
 
 <section class="ai-section" id="assistant">
+  <svg class="x-watermark" viewBox="0 0 340 340" xmlns="http://www.w3.org/2000/svg">
+    <line x1="30" y1="30" x2="310" y2="310"/>
+    <line x1="310" y1="30" x2="30" y2="310"/>
+  </svg>
   <div class="wrap">
     <div class="pain-head">
       <span class="section-eyebrow">Assistant IA</span>
@@ -557,6 +572,10 @@
 </section>
 
 <footer>
+  <svg class="x-watermark" viewBox="0 0 340 340" xmlns="http://www.w3.org/2000/svg">
+    <line x1="30" y1="30" x2="310" y2="310"/>
+    <line x1="310" y1="30" x2="30" y2="310"/>
+  </svg>
   <div class="wrap">
     <div class="logo">
       <svg viewBox="0 0 62 62" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
