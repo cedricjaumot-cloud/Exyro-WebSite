@@ -109,6 +109,36 @@
   .solution-row.reverse .text-col{order:1;}
   .img-col{border-radius:16px;overflow:hidden;aspect-ratio:4/3;position:relative;}
   .img-col img{width:100%;height:100%;object-fit:cover;}
+
+  /* ---------- Portal mockup (écran, pas une photo) ---------- */
+  .portal-mock{background:#DDE6F1;display:flex;align-items:center;justify-content:center;padding:22px;}
+  .mock-window{
+    width:100%;background:#fff;border-radius:10px;overflow:hidden;
+    box-shadow:0 20px 44px rgba(30,45,66,.18);border:1px solid rgba(30,45,66,.08);
+  }
+  .mock-titlebar{display:flex;align-items:center;gap:6px;padding:10px 14px;background:#EEF1F6;border-bottom:1px solid rgba(30,45,66,.06);}
+  .mock-dot{width:8px;height:8px;border-radius:50%;display:inline-block;}
+  .mock-url{
+    margin-left:12px;font-size:11px;color:var(--acier);background:#fff;padding:3px 10px;
+    border-radius:999px;border:1px solid rgba(30,45,66,.08);
+  }
+  .mock-body{display:flex;min-height:280px;}
+  .mock-sidebar{width:34%;background:var(--ardoise);padding:18px 14px;}
+  .mock-logo{color:#fff;font-family:'Montserrat',sans-serif;font-weight:800;font-size:13px;letter-spacing:.1em;margin-bottom:20px;}
+  .mock-navitem{font-size:11px;color:#AEBBCE;padding:8px 10px;border-radius:6px;margin-bottom:4px;}
+  .mock-navitem.active{background:rgba(44,123,229,.22);color:#fff;font-weight:600;}
+  .mock-main{flex:1;padding:16px;display:flex;flex-direction:column;gap:14px;background:#F7F8FA;}
+  .mock-card{background:#fff;border-radius:8px;padding:14px 16px;border:1px solid rgba(30,45,66,.06);}
+  .mock-label{font-size:10.5px;color:var(--acier);font-weight:600;display:block;margin-bottom:6px;}
+  .mock-amount{font-family:'Montserrat',sans-serif;font-weight:800;font-size:22px;color:var(--ardoise);display:block;margin-bottom:10px;}
+  .mock-bars{display:flex;align-items:flex-end;gap:6px;height:44px;}
+  .mock-bars span{flex:1;background:var(--signal);border-radius:3px 3px 0 0;opacity:.85;}
+  .mock-docs .mock-doc{
+    display:flex;align-items:center;gap:8px;font-size:10.5px;color:var(--ardoise);
+    padding:6px 0;border-top:1px solid rgba(30,45,66,.05);
+  }
+  .mock-docs .mock-doc:first-of-type{border-top:0;}
+  .mock-doc-icon{width:14px;height:14px;border-radius:3px;background:var(--ciel);flex-shrink:0;}
   .text-col .step-num{
     font-size:13px;font-weight:800;color:var(--signal);letter-spacing:.1em;margin-bottom:14px;display:block;
   }
@@ -171,6 +201,26 @@
   .typing span:nth-child(3){animation-delay:.4s;}
   @keyframes blink{0%,80%,100%{opacity:.25;}40%{opacity:.8;}}
 
+  /* ---------- FAQ ---------- */
+  .faq{background:var(--white);}
+  .faq-list{display:flex;flex-direction:column;gap:10px;max-width:820px;}
+  .faq-item{
+    background:var(--offwhite);border:1px solid rgba(30,45,66,.08);border-radius:12px;
+    padding:4px 22px;
+  }
+  .faq-item summary{
+    cursor:pointer;padding:18px 0;font-size:15px;font-weight:700;color:var(--ardoise);
+    list-style:none;display:flex;justify-content:space-between;align-items:center;
+  }
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary::after{
+    content:"+";font-size:20px;color:var(--signal);font-weight:400;margin-left:16px;flex-shrink:0;
+  }
+  .faq-item[open] summary::after{content:"–";}
+  .faq-item p{font-size:14px;color:var(--acier);margin:0 0 20px;line-height:1.6;}
+  .faq-item p a{color:var(--signal);font-weight:600;}
+  .faq-item p a:hover{text-decoration:underline;}
+
   /* ---------- Final CTA ---------- */
   .final-cta{
     position:relative;padding:130px 0;text-align:center;color:#fff;overflow:hidden;
@@ -219,7 +269,7 @@
       <a href="#probleme">Le problème</a>
       <a href="#solution">Comment ça marche</a>
       <a href="#assistant">Assistant IA</a>
-      <a href="#contact">Contact</a>
+      <a href="#faq">FAQ</a>
     </div>
     <a href="#contact" class="navcta">Déléguer mon bien</a>
   </nav>
@@ -230,7 +280,7 @@
   <div class="wrap">
     <span class="eyebrow">Gestion locative — Belgique entière</span>
     <h1>Votre bien loué,<span class="rotator" id="rotator">protégé.</span></h1>
-    <p class="lead">Indexation oubliée, loyer impayé, état des lieux contesté : gérer un bien seul prend du temps que vous n'avez pas et coûte cher le jour où ça tourne mal.</p>
+    <p class="lead">Indexation oubliée, loyer impayé, état des lieux contesté : gérer un bien seul vous coûte du temps que vous n'avez pas, et parfois plus cher qu'une gestion professionnelle. EXYRO gère déjà 1 100 baux à travers la Belgique, avec un seul interlocuteur pour tout votre portefeuille.</p>
     <div class="cta-row">
       <a href="#contact" class="btn btn-primary">Déléguer mon bien à EXYRO</a>
       <a href="#solution" class="btn btn-ghost">Voir comment ça marche</a>
@@ -248,18 +298,18 @@
     <div class="pain-grid">
       <div class="pain-card">
         <div class="num">6-10h</div>
-        <h3>Par mois, par bien</h3>
-        <p>Relances de loyer, coordination d'un artisan, suivi administratif : le temps s'accumule vite sur plusieurs biens.</p>
+        <h3>Que vous y consacrez chaque mois</h3>
+        <p>Relances de loyer, coordination d'un artisan, suivi administratif : vous voyez le temps s'accumuler dès que vous gérez plusieurs biens.</p>
       </div>
       <div class="pain-card">
         <div class="num">1 erreur</div>
-        <h3>Suffit à coûter cher</h3>
-        <p>Une indexation mal calculée ou un état des lieux non contradictoire, et c'est le propriétaire qui perd le litige.</p>
+        <h3>Peut vous coûter le litige</h3>
+        <p>Une indexation mal calculée ou un état des lieux non contradictoire, et c'est vous qui perdez face au locataire.</p>
       </div>
       <div class="pain-card">
         <div class="num">Plusieurs mois</div>
         <h3>Sans loyer si ça dérape</h3>
-        <p>Un locataire qui ne paie plus déclenche une procédure judiciaire belge qui peut s'étaler longtemps sans accompagnement.</p>
+        <p>Si un locataire cesse de payer, vous affrontez seul une procédure judiciaire belge qui peut s'étaler longtemps.</p>
       </div>
     </div>
   </div>
@@ -281,9 +331,9 @@
         <h3>Trouver le bon locataire, sans y passer vos soirées.</h3>
         <p>Diffusion, visites, sélection sur dossier, rédaction du bail conforme à la législation régionale.</p>
         <ul>
-          <li>Diffusion sur les principaux portails immobiliers</li>
-          <li>Vérification de solvabilité du candidat</li>
-          <li>Bail rédigé et enregistré dans les règles</li>
+          <li>Votre annonce diffusée sur les principaux portails immobiliers</li>
+          <li>La solvabilité de votre candidat vérifiée avant signature</li>
+          <li>Votre bail rédigé et enregistré dans les règles</li>
         </ul>
       </div>
     </div>
@@ -294,35 +344,67 @@
       </div>
       <div class="text-col">
         <span class="step-num">02 — GESTION COURANTE</span>
-        <h3>Loyers, indexation, sinistres : suivis sans que vous y pensiez.</h3>
+        <h3>Loyers, indexation, sinistres : votre tranquillité, notre routine.</h3>
         <p>Encaissement automatisé, relances en cas de retard, indexation légale calculée chaque année, coordination complète en cas de sinistre.</p>
         <ul>
-          <li>Quittances et décomptes de charges centralisés</li>
-          <li>Indexation légale calculée et appliquée automatiquement</li>
-          <li>Déclaration et suivi des sinistres jusqu'à indemnisation</li>
+          <li>Vos quittances et décomptes de charges centralisés</li>
+          <li>Chaque hausse légale appliquée à la date anniversaire de votre bail</li>
+          <li>Votre sinistre déclaré et suivi jusqu'à indemnisation</li>
         </ul>
       </div>
     </div>
 
-    <div class="solution-row">
-      <div class="img-col">
-        <img src="https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?auto=format&fit=crop&w=1000&q=70" alt="Reporting propriétaire en ligne" loading="lazy">
+    <div class="solution-row" id="visibilite">
+      <div class="img-col portal-mock">
+        <div class="mock-window">
+          <div class="mock-titlebar">
+            <span class="mock-dot" style="background:#ED6A5E;"></span>
+            <span class="mock-dot" style="background:#F4BF4F;"></span>
+            <span class="mock-dot" style="background:#61C454;"></span>
+            <span class="mock-url">portail.exyro.be</span>
+          </div>
+          <div class="mock-body">
+            <div class="mock-sidebar">
+              <div class="mock-logo">EXYRO</div>
+              <div class="mock-navitem active">Tableau de bord</div>
+              <div class="mock-navitem">Revenus</div>
+              <div class="mock-navitem">Documents</div>
+              <div class="mock-navitem">Travaux</div>
+            </div>
+            <div class="mock-main">
+              <div class="mock-card mock-revenue">
+                <span class="mock-label">Revenus locatifs — Août 2026</span>
+                <span class="mock-amount">12 480 €</span>
+                <div class="mock-bars">
+                  <span style="height:40%"></span><span style="height:65%"></span><span style="height:52%"></span>
+                  <span style="height:80%"></span><span style="height:70%"></span><span style="height:95%"></span>
+                </div>
+              </div>
+              <div class="mock-card mock-docs">
+                <span class="mock-label">Documents récents</span>
+                <div class="mock-doc"><span class="mock-doc-icon"></span>État des lieux — Rue de Namur 12</div>
+                <div class="mock-doc"><span class="mock-doc-icon"></span>Avenant indexation — Bail 4021</div>
+                <div class="mock-doc"><span class="mock-doc-icon"></span>Décompte de charges — T2 2026</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="text-col">
         <span class="step-num">03 — VISIBILITÉ TOTALE</span>
         <h3>Vos revenus et vos documents, consultables à tout moment.</h3>
         <p>Un portail en ligne où consulter vos revenus locatifs, vos documents contractuels et l'avancement des travaux, sans devoir nous appeler.</p>
         <ul>
-          <li>Portail propriétaire accessible 24/7</li>
-          <li>Reporting mensuel clair, par bien</li>
-          <li>Historique complet des documents et échanges</li>
+          <li>Votre portail propriétaire accessible 24/7</li>
+          <li>Un reporting mensuel clair pour chacun de vos biens</li>
+          <li>L'historique complet de vos documents et échanges</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<section class="stats-strip">
+<section class="stats-strip" id="chiffres">
   <div class="wrap">
     <div class="stat"><div class="num">1 100+</div><div class="label">Baux actifs gérés</div></div>
     <div class="stat"><div class="num">98%</div><div class="label">Taux d'occupation</div></div>
@@ -343,21 +425,21 @@
         <p class="quote">"J'avais 4 appartements à gérer en plus de mon travail. Depuis qu'EXYRO s'en occupe, je reçois un rapport clair chaque mois et je n'ai plus jamais eu de surprise sur une indexation."</p>
         <div class="who">
           <img class="avatar" src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?auto=format&fit=crop&w=100&q=70" alt="">
-          <div><div class="who-name">Propriétaire, exemple</div><div class="who-role">4 biens, Brabant wallon</div></div>
+          <div><div class="who-name">Propriétaire multi-biens</div><div class="who-role">4 appartements, Brabant wallon</div></div>
         </div>
       </div>
       <div class="testi-card">
         <p class="quote">"Un locataire a arrêté de payer. EXYRO a géré toute la procédure, du rappel à la solution avec le juge de paix. Je n'ai eu qu'à valider les étapes."</p>
         <div class="who">
           <img class="avatar" src="https://images.unsplash.com/photo-1607346256330-dee7af15f7c5?auto=format&fit=crop&w=100&q=70" alt="">
-          <div><div class="who-name">Propriétaire, exemple</div><div class="who-role">Investisseur, Liège</div></div>
+          <div><div class="who-name">Investisseur locatif</div><div class="who-role">Région de Liège</div></div>
         </div>
       </div>
       <div class="testi-card">
         <p class="quote">"Ce que j'apprécie, c'est d'avoir un seul interlocuteur pour tout mon portefeuille, plutôt que de jongler entre plusieurs agences par ville."</p>
         <div class="who">
           <img class="avatar" src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=100&q=70" alt="">
-          <div><div class="who-name">Propriétaire, exemple</div><div class="who-role">Portefeuille multi-régions</div></div>
+          <div><div class="who-name">Propriétaire patrimonial</div><div class="who-role">Portefeuille multi-régions</div></div>
         </div>
       </div>
     </div>
@@ -398,6 +480,37 @@
           </button>
         </form>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="pain-head" style="max-width:680px;">
+      <span class="section-eyebrow" style="color:var(--signal);">Questions fréquentes</span>
+      <h2 style="color:var(--ardoise);">Ce que les propriétaires nous demandent avant de déléguer.</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Que se passe-t-il si un locataire arrête de payer ?</summary>
+        <p>Vous n'affrontez pas la procédure seul : nous relançons, mettons en demeure et, si nécessaire, saisissons le juge de paix en votre nom. Voir le détail dans <a href="#probleme">le coût de gérer seul</a>.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Dois-je changer de bail si j'ai déjà un locataire en place ?</summary>
+        <p>Non. Nous reprenons la gestion de votre bail existant, sans que rien ne change pour votre locataire actuel.</p>
+      </details>
+      <details class="faq-item">
+        <summary>EXYRO intervient-il partout en Belgique ?</summary>
+        <p>Oui, nous couvrons l'ensemble du territoire belge. Voir <a href="#chiffres">nos chiffres</a>.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Comment je consulte mes revenus et mes documents ?</summary>
+        <p>Via votre portail propriétaire en ligne, accessible 24/7. Voir <a href="#visibilite">comment ça fonctionne</a>.</p>
+      </details>
+      <details class="faq-item">
+        <summary>J'ai une question spécifique à ma situation, qui répond ?</summary>
+        <p>Posez-la directement à <a href="#assistant">l'assistant immobilier EXYRO</a>, ou écrivez à votre futur interlocuteur dédié.</p>
+      </details>
     </div>
   </div>
 </section>
