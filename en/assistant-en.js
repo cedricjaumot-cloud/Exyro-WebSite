@@ -163,10 +163,15 @@ async function askAI(userText) {
       signal: controller.signal,
     });
     clearTimeout(timeout);
-    if (!res.ok) return null;
+    if (!res.ok) {
+      const errText = await res.text().catch(() => "");
+      console.error("EXYRO assistant: Worker returned", res.status, errText);
+      return null;
+    }
     const data = await res.json();
     return data.reply || null;
-  } catch {
+  } catch (err) {
+    console.error("EXYRO assistant: fetch to Worker failed", err);
     return null;
   }
 }
