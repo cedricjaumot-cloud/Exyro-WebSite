@@ -2,7 +2,7 @@
 
 // Adresse du worker qui envoie les messages (voir worker/contact-worker.js).
 // Tant que cette valeur est vide, le formulaire ouvre le programme de messagerie du visiteur.
-const CONTACT_URL = "";
+const CONTACT_URL = "https://exyro-contact.ced-j-account.workers.dev";
 
 const B = document.body;
 const D = B.dataset;
