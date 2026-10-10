@@ -376,6 +376,24 @@
     .burger{display:flex;}
     .nav-right{gap:10px;}
   }
+  .team-faces{margin-bottom:56px;}
+  .team-faces h3{font-size:22px;font-weight:800;color:var(--ardoise);margin-bottom:8px;}
+  .team-faces .faces-intro{font-size:15px;color:var(--acier);max-width:680px;margin:0 0 24px;}
+  .team-faces h4{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--acier);margin:40px 0 16px;}
+  .pm-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;}
+  .pm-card{background:#fff;border:1px solid rgba(30,45,66,.08);border-top:3px solid var(--signal);border-radius:16px;padding:30px 14px 24px;text-align:center;}
+  .avatar-lg{width:84px;height:84px;border-radius:50%;margin:0 auto 16px;background:var(--ardoise);color:var(--signal);font-family:'Montserrat',sans-serif;font-weight:800;font-size:34px;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+  .avatar-lg img{width:100%;height:100%;object-fit:cover;}
+  .pm-card .f-name{font-weight:800;font-size:17px;color:var(--ardoise);}
+  .pm-card .f-role{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--signal);margin-top:6px;}
+  .sup-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+  .sup-card{display:flex;align-items:center;gap:14px;background:var(--ciel);border-radius:12px;padding:14px 16px;}
+  .avatar-sm{width:42px;height:42px;border-radius:50%;flex-shrink:0;background:var(--ardoise);color:var(--signal);font-family:'Montserrat',sans-serif;font-weight:800;font-size:17px;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+  .avatar-sm img{width:100%;height:100%;object-fit:cover;}
+  .sup-card .f-name{font-weight:700;font-size:14.5px;color:var(--ardoise);}
+  .sup-card .f-role{font-size:12.5px;color:var(--acier);line-height:1.4;margin-top:2px;}
+  @media (max-width:1100px){.pm-grid{grid-template-columns:repeat(3,1fr);}.sup-grid{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:600px){.pm-grid{grid-template-columns:repeat(2,1fr);}.pm-grid .pm-card:last-child{grid-column:span 2;}.sup-grid{grid-template-columns:1fr;}.avatar-lg{width:72px;height:72px;font-size:30px;}}
   @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto;}.typing span{animation:none;}}
 </style>
 </head>
@@ -636,7 +654,27 @@
         <div class="people" role="img" aria-label="Eleven people"><svg viewBox="0 0 24 24" fill="#2C7BE5" aria-hidden="true"><circle cx="12" cy="7.5" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8z"/></svg><svg viewBox="0 0 24 24" fill="#2C7BE5" aria-hidden="true"><circle cx="12" cy="7.5" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8z"/></svg><svg viewBox="0 0 24 24" fill="#2C7BE5" aria-hidden="true"><circle cx="12" cy="7.5" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8z"/></svg><svg viewBox="0 0 24 24" fill="#2C7BE5" aria-hidden="true"><circle cx="12" cy="7.5" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8z"/></svg><svg viewBox="0 0 24 24" fill="#2C7BE5" aria-hidden="true"><circle cx="12" cy="7.5" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8z"/></svg><svg viewBox="0 0 24 24" fill="#2C7BE5" aria-hidden="true"><circle cx="12" cy="7.5" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8z"/></svg><svg viewBox="0 0 24 24" fill="#2C7BE5" aria-hidden="true"><circle cx="12" cy="7.5" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8z"/></svg><svg viewBox="0 0 24 24" fill="#2C7BE5" aria-hidden="true"><circle cx="12" cy="7.5" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8z"/></svg><svg viewBox="0 0 24 24" fill="#2C7BE5" aria-hidden="true"><circle cx="12" cy="7.5" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8z"/></svg><svg viewBox="0 0 24 24" fill="#2C7BE5" aria-hidden="true"><circle cx="12" cy="7.5" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8z"/></svg><svg viewBox="0 0 24 24" fill="#2C7BE5" aria-hidden="true"><circle cx="12" cy="7.5" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8z"/></svg></div>
       </div>
     </div>
-    <!-- Portraits de l'équipe : à ajouter ici lorsque les photos seront disponibles -->
+    <div class="team-faces">
+      <h3>Your Property Managers</h3>
+      <p class="faces-intro">They know your file, your properties and your tenants. The rest of the team is there to give them time to listen to you.</p>
+      <!-- Photos : remplacer la lettre par <img src="..."> dans chaque .avatar-lg / .avatar-sm -->
+      <div class="pm-grid">
+        <div class="pm-card"><div class="avatar-lg">M</div><div class="f-name">Marine</div><div class="f-role">Property Manager</div></div>
+        <div class="pm-card"><div class="avatar-lg">O</div><div class="f-name">Odile</div><div class="f-role">Property Manager</div></div>
+        <div class="pm-card"><div class="avatar-lg">A</div><div class="f-name">Adam</div><div class="f-role">Property Manager</div></div>
+        <div class="pm-card"><div class="avatar-lg">E</div><div class="f-name">Edouard</div><div class="f-role">Property Manager</div></div>
+        <div class="pm-card"><div class="avatar-lg">L</div><div class="f-name">Lien</div><div class="f-role">Property Manager</div></div>
+      </div>
+      <h4>And the people behind them</h4>
+      <div class="sup-grid">
+        <div class="sup-card"><div class="avatar-sm">M</div><div><div class="f-name">Maite</div><div class="f-role">IPI agent</div></div></div>
+        <div class="sup-card"><div class="avatar-sm">G</div><div><div class="f-name">Gianni</div><div class="f-role">Head of Finance</div></div></div>
+        <div class="sup-card"><div class="avatar-sm">A</div><div><div class="f-name">Anne</div><div class="f-role">Assistant</div></div></div>
+        <div class="sup-card"><div class="avatar-sm">C</div><div><div class="f-name">Cedric</div><div class="f-role">IT, operations & sales</div></div></div>
+        <div class="sup-card"><div class="avatar-sm">M</div><div><div class="f-name">Maxime</div><div class="f-role">Shareholder, director & IT consultant</div></div></div>
+        <div class="sup-card"><div class="avatar-sm">D</div><div><div class="f-name">Dominique</div><div class="f-role">CEO</div></div></div>
+      </div>
+    </div>
     <div class="team-cols">
       <div class="team-col digital">
         <h3>What digital takes care of</h3>
