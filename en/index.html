@@ -238,26 +238,30 @@
   .testi-card .who-role{font-size:12px;color:var(--acier);}
 
   /* ---------- AI Assistant ---------- */
-  .ai-section{background:var(--ardoise);position:relative;overflow:hidden;z-index:0;}
   .ai-shell{
-    display:grid;grid-template-columns:1fr 1.1fr;gap:0;background:#243247;border-radius:20px;overflow:hidden;
+    display:grid;grid-template-columns:1fr 1.3fr;gap:0;background:#243247;border-radius:20px;overflow:hidden;
   }
-  .ai-info{padding:48px 42px;color:#fff;}
-  .ai-info .tag{
-    display:inline-block;background:rgba(44,123,229,.2);color:#8EB8F5;font-size:11px;letter-spacing:.14em;
-    text-transform:uppercase;font-weight:700;padding:5px 12px;border-radius:999px;margin-bottom:22px;
-  }
+  .faq-ask{margin-top:72px;scroll-margin-top:90px;}
+  .ai-info{padding:44px 38px;color:#fff;}
   .ai-info h3{font-size:clamp(22px,2.6vw,28px);font-weight:800;line-height:1.28;margin-bottom:16px;}
   .ai-info p{color:#B9C4D6;font-size:14.5px;margin-bottom:26px;}
-  .chat{display:flex;flex-direction:column;height:540px;background:#F7F8FA;}
-  .chat-log{flex:1;overflow-y:auto;padding:28px 30px;display:flex;flex-direction:column;gap:16px;}
-  .msg{max-width:82%;font-size:14px;line-height:1.5;padding:12px 16px;border-radius:12px;}
+  .ai-info h4{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#8EB8F5;margin:0 0 12px;}
+  .ask-topics{display:flex;flex-direction:column;gap:8px;margin-bottom:26px;}
+  .ask-topic{font-family:inherit;font-size:13.5px;line-height:1.4;text-align:left;cursor:pointer;color:#E3E9F2;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:11px 14px;transition:border-color .15s,background .15s;}
+  .ask-topic:hover{border-color:var(--signal);background:rgba(44,123,229,.16);}
+  .ai-info .ask-note{font-size:12px;color:#8FA0B8;margin:0;}
+  .chat{scroll-margin-top:84px;display:flex;flex-direction:column;min-height:560px;background:#F7F8FA;}
+  .chat-log{position:relative;flex:1 1 0;min-height:0;overflow-y:auto;padding:28px 30px;display:flex;flex-direction:column;gap:16px;}
+  .msg{max-width:94%;font-size:14.5px;line-height:1.6;padding:14px 18px;border-radius:12px;}
+  .msg p{margin:0 0 10px;}
+  .msg p:last-child,.msg ul:last-child,.msg ol:last-child{margin-bottom:0;}
+  .msg ul,.msg ol{margin:0 0 10px;padding-left:20px;}
+  .msg li{margin-bottom:6px;}
+  .msg strong{font-weight:700;color:var(--ardoise);}
+  .msg.user strong{color:#fff;}
   .msg.bot{background:#fff;color:var(--ardoise);align-self:flex-start;border-bottom-left-radius:2px;border:1px solid rgba(30,45,66,.06);}
   .msg.bot strong.pitch{color:var(--signal);}
   .msg.user{background:var(--signal);color:#fff;align-self:flex-end;border-bottom-right-radius:2px;}
-  .suggestions{display:flex;flex-wrap:wrap;gap:8px;padding:0 30px 18px;}
-  .chip{font-size:12.5px;border:1px solid rgba(30,45,66,.15);color:var(--acier);padding:7px 13px;border-radius:999px;cursor:pointer;background:#fff;transition:border-color .15s, color .15s;}
-  .chip:hover{border-color:var(--signal);color:var(--signal);}
   .chat-input{display:flex;gap:10px;padding:18px 20px;border-top:1px solid rgba(30,45,66,.08);background:#fff;}
   .chat-input input{flex:1;border:1px solid rgba(30,45,66,.15);border-radius:999px;padding:12px 18px;font-size:14px;font-family:inherit;outline:none;}
   .chat-input input:focus{border-color:var(--signal);}
@@ -333,9 +337,10 @@
     .stats-strip .wrap{grid-template-columns:1fr 1fr;row-gap:24px;}
     .testi-grid{grid-template-columns:1fr;}
     .ai-shell{grid-template-columns:1fr;}
-    .chat{height:520px;}
-    .suggestions{flex-wrap:nowrap;overflow-x:auto;padding:0 20px 14px;-webkit-overflow-scrolling:touch;}
-    .chip{flex-shrink:0;}
+    .ai-info{padding:32px 24px;}
+    .chat-log{padding:20px 18px;}
+    .msg{max-width:100%;}
+    .chat{height:560px;}
     .fcol-pair{grid-template-columns:1fr 1fr;gap:16px;}
     footer .wrap{gap:32px;}
   }
@@ -408,7 +413,6 @@
       <a href="#benefits">Why outsource</a>
       <a href="#solution">How it works</a>
       <a href="#team">Our team</a>
-      <a href="#assistant">AI assistant</a>
       <a href="#faq">FAQ</a>
     </div>
     <div class="nav-right">
@@ -426,7 +430,6 @@
     <a href="#benefits">Why outsource</a>
     <a href="#solution">How it works</a>
     <a href="#team">Our team</a>
-    <a href="#assistant">AI assistant</a>
     <a href="#faq">FAQ</a>
     <a href="https://app.exyro.be/en/my" target="_blank" rel="noopener">Client area</a>
     <div class="mm-lang">
@@ -741,56 +744,6 @@
   </div>
 </section>
 
-<section class="ai-section" id="assistant">
-  <svg class="x-watermark" viewBox="0 0 340 340" xmlns="http://www.w3.org/2000/svg">
-    <line x1="30" y1="30" x2="310" y2="310"/>
-    <line x1="310" y1="30" x2="30" y2="310"/>
-  </svg>
-  <div class="wrap">
-    <div class="pain-head">
-      <span class="section-eyebrow">AI assistant</span>
-      <h2 style="color:#fff;">A question about renting in Belgium? Ask away.</h2>
-    </div>
-    <div class="ai-shell">
-      <div class="ai-info">
-        <span class="tag">Demo</span>
-        <h3>Investing, yes. Managing everything yourself, not necessarily.</h3>
-        <p>Rental property remains one of the most accessible investments in Belgium. But regulations vary by Region and change every year: an indexation error or a badly worded notice often costs more than professional management would, and eats directly into your yield.</p>
-        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
-          <li style="font-size:13px;color:#C9D3E0;display:flex;gap:10px;"><span style="width:6px;height:6px;border-radius:50%;background:var(--signal);margin-top:6px;flex-shrink:0;"></span>A single point of contact for all your properties</li>
-          <li style="font-size:13px;color:#C9D3E0;display:flex;gap:10px;"><span style="width:6px;height:6px;border-radius:50%;background:var(--signal);margin-top:6px;flex-shrink:0;"></span>Ongoing legal and tax monitoring</li>
-          <li style="font-size:13px;color:#C9D3E0;display:flex;gap:10px;"><span style="width:6px;height:6px;border-radius:50%;background:var(--signal);margin-top:6px;flex-shrink:0;"></span>Documents centralised and available online</li>
-        </ul>
-        <p style="margin:22px 0 0;font-size:13px;">This assistant answers general questions at any hour. For your own situation, a member of the team takes over.</p>
-      </div>
-      <div class="chat">
-        <div class="chat-log" id="chatLog">
-          <div class="msg bot">Hello, I'm the EXYRO property assistant. Investing, returns, tax, property management: ask me a question about real estate in Belgium, or pick a topic below. For your own file, a member of the team will reply.</div>
-        </div>
-        <div class="suggestions" id="suggestions">
-          <span class="chip" data-q="start">Getting started investing</span>
-          <span class="chip" data-q="yield">What yield can I expect?</span>
-          <span class="chip" data-q="tax">Taxation of rental income</span>
-          <span class="chip" data-q="indexation">Rent indexation</span>
-          <span class="chip" data-q="notice">Tenant's notice period</span>
-          <span class="chip" data-q="deposit">Rental deposit</span>
-          <span class="chip" data-q="inspection">Inspection report</span>
-          <span class="chip" data-q="arrears">Unpaid rent</span>
-          <span class="chip" data-q="syndic">Syndic or property management?</span>
-          <span class="chip" data-q="portfolio">Managing several properties</span>
-          <span class="chip" data-q="renovation">Should I renovate?</span>
-        </div>
-        <form class="chat-input" id="chatForm">
-          <input type="text" id="chatInput" placeholder="E.g.: how do I index a rent in Wallonia?" autocomplete="off">
-          <button type="submit" aria-label="Send">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4z"/></svg>
-          </button>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section class="faq" id="faq">
   <div class="wrap">
     <div class="pain-head" style="max-width:680px;">
@@ -827,6 +780,33 @@
         <p>Ask it directly to the <a href="#assistant">EXYRO property assistant</a>, or write to your future dedicated contact.</p>
       </details>
     </div>
+
+    <div class="ai-shell faq-ask" id="assistant">
+      <div class="ai-info">
+        <h3>More questions about property?</h3>
+        <p>Our assistant answers your general questions about renting and investing in Belgium: it explains, warns you, and shows where to check the information (IPI, FPS Finance, notaries, Regions). For your personal situation, a member of the team takes over.</p>
+        <h4>A few topics</h4>
+        <div class="ask-topics" id="askTopics">
+          <button type="button" class="ask-topic" data-q="bail">Signing a lease: what should I watch for?</button>
+          <button type="button" class="ask-topic" data-q="candidat">What information can I ask a candidate tenant for?</button>
+          <button type="button" class="ask-topic" data-q="deces">What to do if the landlord or the tenant dies?</button>
+          <button type="button" class="ask-topic" data-q="conflit">What to do in a dispute with my tenant or landlord?</button>
+          <button type="button" class="ask-topic" data-q="investir">Why invest in property?</button>
+          <button type="button" class="ask-topic" data-q="levier">The leverage effect of credit, explained simply</button>
+          <button type="button" class="ask-topic" data-q="bitcoin">Property or bitcoin: how to think about it?</button>
+        </div>
+        <p class="ask-note">Virtual assistant: its answers are informative and do not replace legal advice or a notary's opinion.</p>
+      </div>
+      <div class="chat">
+        <div class="chat-log" id="chatLog"></div>
+        <form class="chat-input" id="chatForm">
+          <input type="text" id="chatInput" placeholder="Ask about renting or investing" autocomplete="off">
+          <button type="submit" aria-label="Send">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4z"/></svg>
+          </button>
+        </form>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -853,7 +833,6 @@
       <a href="#benefits">Why outsource</a>
       <a href="#solution">How it works</a>
       <a href="#team">Our team</a>
-      <a href="#assistant">AI assistant</a>
       <a href="https://app.exyro.be/en/my" target="_blank" rel="noopener">Client area</a>
     </div>
     <div class="fcol-pair">
