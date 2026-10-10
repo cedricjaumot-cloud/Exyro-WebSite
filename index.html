@@ -399,6 +399,9 @@
   .sup-card .f-role{font-size:12.5px;color:var(--acier);line-height:1.4;margin-top:2px;}
   @media (max-width:1100px){.pm-grid{grid-template-columns:repeat(3,1fr);}.sup-grid{grid-template-columns:repeat(2,1fr);}}
   @media (max-width:600px){.pm-grid{grid-template-columns:repeat(2,1fr);}.pm-grid .pm-card:last-child{grid-column:span 2;}.sup-grid{grid-template-columns:1fr;}.avatar-lg{width:72px;height:72px;font-size:30px;}}
+  a.pm-card,a.sup-card{text-decoration:none;color:inherit;transition:transform .15s,box-shadow .15s,border-color .15s;}
+  a.pm-card:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(30,45,66,.12);}
+  a.sup-card:hover{box-shadow:0 6px 16px rgba(30,45,66,.12);}
   @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto;}.typing span{animation:none;}}
 </style>
 </head>
@@ -659,21 +662,21 @@
     </div>
     <div class="team-faces">
       <h3>Vos Property Managers</h3>
-      <p class="faces-intro">Ce sont elles et eux qui connaissent votre dossier, vos biens et vos locataires. Le reste de l'équipe est là pour leur donner le temps de vous écouter.</p>
+      <p class="faces-intro">Ce sont elles et eux qui connaissent votre dossier, vos biens et vos locataires. Le reste de l'équipe est là pour leur donner le temps de vous écouter. Cliquez sur une carte pour les découvrir et leur écrire directement.</p>
       <!-- Photos : remplacer la lettre par <img src="..."> dans chaque .avatar-lg / .avatar-sm -->
       <div class="pm-grid">
-        <div class="pm-card"><div class="avatar-lg">A</div><div class="f-name">Adam</div><div class="f-role">Property Manager</div></div>
-        <div class="pm-card"><div class="avatar-lg">E</div><div class="f-name">Edouard</div><div class="f-role">Property Manager</div></div>
-        <div class="pm-card"><div class="avatar-lg">L</div><div class="f-name">Lien</div><div class="f-role">Property Manager</div></div>
-        <div class="pm-card"><div class="avatar-lg">M</div><div class="f-name">Marine</div><div class="f-role">Property Manager</div></div>
-        <div class="pm-card"><div class="avatar-lg">O</div><div class="f-name">Odile</div><div class="f-role">Property Manager</div></div>
+        <a class="pm-card" href="equipe/adam-el-idrissi/"><div class="avatar-lg">A</div><div class="f-name">Adam</div><div class="f-role">Property Manager</div></a>
+        <a class="pm-card" href="equipe/edouard-buyck/"><div class="avatar-lg">E</div><div class="f-name">Edouard</div><div class="f-role">Property Manager</div></a>
+        <a class="pm-card" href="equipe/lien-vanderper/"><div class="avatar-lg">L</div><div class="f-name">Lien</div><div class="f-role">Property Manager</div></a>
+        <a class="pm-card" href="equipe/marine-capelle/"><div class="avatar-lg">M</div><div class="f-name">Marine</div><div class="f-role">Property Manager</div></a>
+        <a class="pm-card" href="equipe/odile-snickers/"><div class="avatar-lg">O</div><div class="f-name">Odile</div><div class="f-role">Property Manager</div></a>
       </div>
       <h4>Et ceux qui les soutiennent</h4>
       <div class="sup-grid">
         <div class="sup-card"><div class="avatar-sm">A</div><div><div class="f-name">Anne</div><div class="f-role">Assistance administrative</div></div></div>
-        <div class="sup-card"><div class="avatar-sm">C</div><div><div class="f-name">Cedric</div><div class="f-role">IT, opérations & commercial</div></div></div>
+        <a class="sup-card" href="equipe/cedric-jaumot/"><div class="avatar-sm">C</div><div><div class="f-name">Cedric</div><div class="f-role">Opérations, commercial & IT</div></div></a>
         <div class="sup-card"><div class="avatar-sm">D</div><div><div class="f-name">Dominique</div><div class="f-role">Direction générale</div></div></div>
-        <div class="sup-card"><div class="avatar-sm">G</div><div><div class="f-name">Gianni</div><div class="f-role">Finance</div></div></div>
+        <div class="sup-card"><div class="avatar-sm">G</div><div><div class="f-name">Gianni</div><div class="f-role">Finance, juridique & RH</div></div></div>
         <div class="sup-card"><div class="avatar-sm">M</div><div><div class="f-name">Maite</div><div class="f-role">Agrément IPI</div></div></div>
         <div class="sup-card"><div class="avatar-sm">M</div><div><div class="f-name">Maxime</div><div class="f-role">Gouvernance & IA</div></div></div>
       </div>

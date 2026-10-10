@@ -1,0 +1,54 @@
+:root{--ardoise:#1E2D42;--acier:#3E5068;--signal:#2C7BE5;--ciel:#E8EEF7;--offwhite:#F7F8FA;}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;background:var(--offwhite);color:var(--ardoise);font-family:'Inter',Calibri,sans-serif;line-height:1.6;}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px;}
+.top{background:var(--ardoise);padding:18px 0;}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;}
+.brand img{height:30px;width:auto;display:block;}
+.top-right{display:flex;align-items:center;gap:22px;}
+.back{color:#C9D3E0;text-decoration:none;font-size:13.5px;font-weight:600;}
+.back:hover{color:#fff;}
+.lang{display:flex;align-items:center;gap:6px;font-size:12.5px;font-weight:700;color:#4A5A70;}
+.lang a{color:#8393A8;text-decoration:none;padding:4px 2px;}
+.lang a.active,.lang a:hover{color:#fff;}
+.profile{display:grid;grid-template-columns:340px 1fr;gap:28px;padding-top:48px;padding-bottom:72px;align-items:start;}
+.card{background:#fff;border:1px solid rgba(30,45,66,.08);border-radius:16px;padding:32px;}
+.main-col{display:flex;flex-direction:column;gap:24px;}
+.id-card{text-align:center;position:sticky;top:24px;}
+.p-avatar{position:relative;width:168px;height:168px;border-radius:50%;margin:0 auto 20px;background:var(--ardoise);color:var(--signal);font-family:'Montserrat',sans-serif;font-weight:800;font-size:64px;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.p-avatar img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+h1{font-family:'Montserrat',sans-serif;font-weight:800;font-size:26px;line-height:1.2;margin:0 0 6px;}
+.p-role{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--signal);}
+.p-focus{font-size:13.5px;color:var(--acier);margin-top:6px;}
+.contact-list{list-style:none;margin:24px 0 20px;padding:0;text-align:left;display:flex;flex-direction:column;gap:14px;}
+.contact-list li{font-size:14.5px;line-height:1.5;word-break:break-word;}
+.contact-list span{display:block;font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--acier);margin-bottom:2px;}
+.contact-list a{color:var(--ardoise);font-weight:600;text-decoration:none;}
+.contact-list a:hover{color:var(--signal);}
+h2{font-family:'Montserrat',sans-serif;font-weight:800;font-size:20px;margin:0 0 10px;}
+.sub{color:var(--acier);font-size:14.5px;margin:0 0 20px;}
+.bio{font-size:15.5px;color:var(--acier);margin:0;white-space:pre-line;}
+.bio.empty{font-style:italic;}
+form label{display:block;font-size:13px;font-weight:600;color:var(--ardoise);margin-bottom:14px;}
+form input[type=text],form input[type=email],form input[type=tel],form textarea{display:block;width:100%;margin-top:6px;border:1px solid rgba(30,45,66,.18);border-radius:10px;padding:12px 14px;font:inherit;font-size:15px;background:#fff;color:var(--ardoise);outline:none;}
+form input:focus,form textarea:focus{border-color:var(--signal);box-shadow:0 0 0 3px rgba(44,123,229,.15);}
+form textarea{resize:vertical;min-height:140px;}
+.hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;opacity:0;}
+.btn{background:var(--signal);color:#fff;border:0;border-radius:999px;padding:13px 28px;font:inherit;font-weight:700;font-size:14.5px;cursor:pointer;}
+.btn:hover{background:#4a92ec;}
+.btn:disabled{opacity:.6;cursor:wait;}
+.btn-ghost{background:transparent;color:var(--ardoise);border:1px solid rgba(30,45,66,.25);border-radius:999px;padding:11px 22px;font:inherit;font-weight:600;font-size:13.5px;cursor:pointer;}
+.btn-ghost:hover{border-color:var(--signal);color:var(--signal);}
+.consent{font-size:12px;color:var(--acier);margin:16px 0 0;}
+.consent a{color:var(--signal);}
+.status{font-size:14px;font-weight:600;margin:14px 0 0;min-height:1.2em;}
+.status.ok{color:#1F7A4D;}
+.status.ko{color:#B3261E;}
+.foot{background:var(--ardoise);color:#7C8CA3;font-size:12px;padding:24px 0;text-align:center;}
+@media (max-width:860px){
+  .profile{grid-template-columns:1fr;padding-top:28px;}
+  .id-card{position:static;}
+  .card{padding:24px 20px;}
+  .back{display:none;}
+}

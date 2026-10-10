@@ -1,0 +1,6 @@
+PHOTOS : déposez ici une photo carrée par personne, nommée comme dans l'adresse de sa page, en .jpg
+Exemple : marine-capelle.jpg, adam-el-idrissi.jpg, edouard-buyck.jpg, lien-vanderper.jpg, odile-snickers.jpg, cedric-jaumot.jpg
+Taille conseillée : 600 x 600 pixels, moins de 300 Ko.
+
+PRESENTATIONS : le mot de chacun s'écrit dans bios.json (une ligne par langue : fr, nl, en).
+Ne supprimez ni les guillemets ni les virgules. Si une langue est vide, le français est affiché.
