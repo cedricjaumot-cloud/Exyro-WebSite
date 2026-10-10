@@ -339,6 +339,43 @@
     .fcol-pair{grid-template-columns:1fr 1fr;gap:16px;}
     footer .wrap{gap:32px;}
   }
+
+  /* ---- Équipe / dimension humaine ---- */
+  .team{background:var(--offwhite);padding:100px 0;}
+  .team-top{display:grid;grid-template-columns:1.3fr 1fr;gap:56px;align-items:center;margin-bottom:48px;}
+  .team-top .section-eyebrow{color:var(--signal);}
+  .team-top h2{font-size:clamp(28px,4vw,42px);font-weight:800;line-height:1.15;color:var(--ardoise);margin-bottom:18px;}
+  .team-top p{font-size:16px;color:var(--acier);margin:0;}
+  .team-count{background:var(--ardoise);border-radius:16px;padding:34px 28px;color:#fff;text-align:center;}
+  .team-count .big{font-family:'Montserrat',sans-serif;font-weight:800;font-size:76px;line-height:1;color:var(--signal);}
+  .team-count .big-label{font-size:13px;color:#C9D3E0;margin:8px 0 22px;}
+  .people{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;}
+  .people svg{width:30px;height:30px;}
+  .team-cols{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+  .team-col{border-radius:16px;padding:34px 32px;}
+  .team-col.digital{background:#fff;border:1px solid rgba(30,45,66,.1);}
+  .team-col.human{background:var(--ciel);border:1px solid var(--signal);}
+  .team-col h3{font-size:18px;font-weight:800;color:var(--ardoise);margin-bottom:6px;}
+  .team-col .sub{font-size:13.5px;color:var(--acier);margin-bottom:20px;}
+  .team-col ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px;}
+  .team-col li{font-size:14px;color:var(--ardoise);display:flex;gap:12px;line-height:1.5;}
+  .team-col li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--signal);margin-top:7px;flex-shrink:0;}
+  .team-pledge{max-width:720px;margin:48px auto 0;text-align:center;}
+  .team-pledge p{font-size:17px;font-weight:600;color:var(--ardoise);line-height:1.55;margin-bottom:24px;}
+  @media (max-width:900px){
+    .team{padding:70px 0;}
+    .team-top{grid-template-columns:1fr;gap:32px;}
+    .team-cols{grid-template-columns:1fr;}
+  }
+  .navlinks a,.navcta{white-space:nowrap;}
+  .navlinks{gap:26px;}
+  @media (max-width:1180px){
+    .navlinks{display:none;}
+    .navcta-ghost{display:none;}
+    .lang-switch{display:none;}
+    .burger{display:flex;}
+    .nav-right{gap:10px;}
+  }
   @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto;}.typing span{animation:none;}}
 </style>
 </head>
@@ -352,6 +389,7 @@
     <div class="navlinks">
       <a href="#benefits">Why outsource</a>
       <a href="#solution">How it works</a>
+      <a href="#team">Our team</a>
       <a href="#assistant">AI assistant</a>
       <a href="#faq">FAQ</a>
     </div>
@@ -369,6 +407,7 @@
   <div class="mobile-menu" id="mobileMenu">
     <a href="#benefits">Why outsource</a>
     <a href="#solution">How it works</a>
+    <a href="#team">Our team</a>
     <a href="#assistant">AI assistant</a>
     <a href="#faq">FAQ</a>
     <a href="https://app.exyro.be/en/my" target="_blank" rel="noopener">Client area</a>
@@ -384,7 +423,7 @@
   <div class="wrap">
     <span class="eyebrow">Rental management, all of Belgium</span>
     <h1>Your rental property,<span class="rotator" id="rotator">protected.</span></h1>
-    <p class="lead">A missed indexation, unpaid rent, a disputed inspection report: managing a property on your own costs you time you don't have, and sometimes more than professional management would. EXYRO already manages 1,100 leases across Belgium, with a single point of contact for your entire portfolio.</p>
+    <p class="lead">A missed indexation, unpaid rent, a disputed inspection report: managing a property on your own costs you time you don't have, and sometimes more than professional management would. EXYRO is a team of 11 people already managing 1,100 leases across Belgium. Digital tools save us time, and that time goes into what matters: listening to you and your tenants.</p>
     <div class="cta-row">
       <a href="#contact" class="btn btn-primary">Outsource my property to EXYRO</a>
       <a href="#solution" class="btn btn-ghost">See how it works</a>
@@ -416,7 +455,7 @@
       </div>
       <div class="pain-card">
         <div class="num">1 phone call</div>
-        <h3>Even when something goes wrong</h3>
+        <h3>And a real person picks up</h3>
         <p>If a tenant stops paying, you don't face the procedure alone: our team handles it for you, from the first reminder through to the resolution.</p>
       </div>
     </div>
@@ -461,6 +500,7 @@
           <li>Every legal increase applied on your lease's anniversary date</li>
           <li>Your claim filed and followed up through to compensation</li>
           <li>Your move-out inspection report and deposit release, handled for you</li>
+          <li>Your voice heard at co-owners' general meetings: we represent you there</li>
         </ul>
       </div>
     </div>
@@ -518,10 +558,11 @@
         <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1000&q=70" alt="Maintenance and value creation for a rental property" loading="lazy">
       </div>
       <div class="text-col">
-        <span class="step-num">04 - MAINTENANCE & VALUE CREATION</span>
-        <h3>Maintenance designed for return, not just comfort.</h3>
-        <p>Wear and tear, small repairs, targeted improvements: we track your property's condition over time and only recommend work when it makes economic sense, for your rent as much as for its resale value.</p>
+        <span class="step-num">04 - DIAGNOSTIC, MAINTENANCE & VALUE CREATION</span>
+        <h3>Knowing what to do tomorrow, then maintenance designed for return.</h3>
+        <p>Our property diagnostic tool gathers the data on your property or your portfolio, and a member of the team takes the time to analyse it with you. After that, we track your property's condition over time and only recommend work when it makes economic sense, for your rent as much as for its resale value.</p>
         <ul>
+          <li>A diagnostic of your property, discussed with you: you know what needs doing, and in what order</li>
           <li>Preventive tracking of your property's condition, not just emergencies</li>
           <li>Every investment costed out: expected impact on rent and on property value</li>
           <li>No spending committed without your prior approval</li>
@@ -581,6 +622,54 @@
   </div>
 </section>
 
+<section class="team" id="team">
+  <div class="wrap">
+    <div class="team-top">
+      <div>
+        <span class="section-eyebrow">Our team</span>
+        <h2>11 people, and no plan to have fewer.</h2>
+        <p>We use digital tools and AI for one reason: to save time on administration so we can spend more of it on what really matters, our relationship with owners and tenants. It doesn't replace people, it gives them room back.</p>
+      </div>
+      <div class="team-count">
+        <div class="big">11</div>
+        <div class="big-label">people in the EXYRO team</div>
+        <div class="people" role="img" aria-label="Eleven people"><svg viewBox="0 0 24 24" fill="#2C7BE5" aria-hidden="true"><circle cx="12" cy="7.5" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8z"/></svg><svg viewBox="0 0 24 24" fill="#2C7BE5" aria-hidden="true"><circle cx="12" cy="7.5" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8z"/></svg><svg viewBox="0 0 24 24" fill="#2C7BE5" aria-hidden="true"><circle cx="12" cy="7.5" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8z"/></svg><svg viewBox="0 0 24 24" fill="#2C7BE5" aria-hidden="true"><circle cx="12" cy="7.5" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8z"/></svg><svg viewBox="0 0 24 24" fill="#2C7BE5" aria-hidden="true"><circle cx="12" cy="7.5" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8z"/></svg><svg viewBox="0 0 24 24" fill="#2C7BE5" aria-hidden="true"><circle cx="12" cy="7.5" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8z"/></svg><svg viewBox="0 0 24 24" fill="#2C7BE5" aria-hidden="true"><circle cx="12" cy="7.5" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8z"/></svg><svg viewBox="0 0 24 24" fill="#2C7BE5" aria-hidden="true"><circle cx="12" cy="7.5" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8z"/></svg><svg viewBox="0 0 24 24" fill="#2C7BE5" aria-hidden="true"><circle cx="12" cy="7.5" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8z"/></svg><svg viewBox="0 0 24 24" fill="#2C7BE5" aria-hidden="true"><circle cx="12" cy="7.5" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8z"/></svg><svg viewBox="0 0 24 24" fill="#2C7BE5" aria-hidden="true"><circle cx="12" cy="7.5" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8z"/></svg></div>
+      </div>
+    </div>
+    <!-- Portraits de l'équipe : à ajouter ici lorsque les photos seront disponibles -->
+    <div class="team-cols">
+      <div class="team-col digital">
+        <h3>What digital takes care of</h3>
+        <div class="sub">The repetitive work, so nobody wastes time on it.</div>
+        <ul>
+          <li>Receipts, reminders and indexations prepared automatically</li>
+          <li>Documents filed and available online</li>
+          <li>Reports and figures updated without re-entering data</li>
+          <li>Your property's data gathered and analysed by our diagnostic tool</li>
+          <li>Legal watch and routine checks</li>
+        </ul>
+      </div>
+      <div class="team-col human">
+        <h3>What stays in human hands</h3>
+        <div class="sub">Everything that takes listening, understanding and deciding.</div>
+        <ul>
+          <li>Taking the time to assess your portfolio or one property in particular, and deciding with you what to do tomorrow</li>
+          <li>Representing you at co-owners' general meetings and making your voice heard</li>
+          <li>Listening to an owner who hesitates before letting</li>
+          <li>Reassuring a tenant going through a difficult time</li>
+          <li>Meeting, visiting and carrying out the inspection on site</li>
+          <li>Talking with a tenant in difficulty before it comes to a procedure</li>
+          <li>Advising, weighing up and deciding</li>
+        </ul>
+      </div>
+    </div>
+    <div class="team-pledge">
+      <p>Our commitment: every hour the tools save us is reinvested in our relationship with you and your tenants. The team isn't shrinking, it is focusing on what matters most.</p>
+      <a href="#contact" class="btn btn-primary">Talk to the team</a>
+    </div>
+  </div>
+</section>
+
 <section class="testi">
   <div class="wrap">
     <div class="testi-head">
@@ -626,7 +715,7 @@
     </div>
     <div class="ai-shell">
       <div class="ai-info">
-        <span class="tag">Démo</span>
+        <span class="tag">Demo</span>
         <h3>Investing, yes. Managing everything yourself, not necessarily.</h3>
         <p>Rental property remains one of the most accessible investments in Belgium. But regulations vary by Region and change every year: an indexation error or a badly worded notice often costs more than professional management would, and eats directly into your yield.</p>
         <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
@@ -634,10 +723,11 @@
           <li style="font-size:13px;color:#C9D3E0;display:flex;gap:10px;"><span style="width:6px;height:6px;border-radius:50%;background:var(--signal);margin-top:6px;flex-shrink:0;"></span>Ongoing legal and tax monitoring</li>
           <li style="font-size:13px;color:#C9D3E0;display:flex;gap:10px;"><span style="width:6px;height:6px;border-radius:50%;background:var(--signal);margin-top:6px;flex-shrink:0;"></span>Documents centralised and available online</li>
         </ul>
+        <p style="margin:22px 0 0;font-size:13px;">This assistant answers general questions at any hour. For your own situation, a member of the team takes over.</p>
       </div>
       <div class="chat">
         <div class="chat-log" id="chatLog">
-          <div class="msg bot">Hello, I'm the EXYRO property assistant. Investing, returns, tax, property management: ask me a question about real estate in Belgium, or pick a topic below.</div>
+          <div class="msg bot">Hello, I'm the EXYRO property assistant. Investing, returns, tax, property management: ask me a question about real estate in Belgium, or pick a topic below. For your own file, a member of the team will reply.</div>
         </div>
         <div class="suggestions" id="suggestions">
           <span class="chip" data-q="start">Getting started investing</span>
@@ -671,6 +761,14 @@
     </div>
     <div class="faq-list">
       <details class="faq-item">
+        <summary>Who represents me at co-owners' general meetings?</summary>
+        <p>We do. EXYRO represents you at co-owners' general meetings and makes your voice heard, so you don't have to attend. See <a href="#solution">what we handle for you</a>.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Is everything automated? Will I speak to a real person?</summary>
+        <p>Yes, you will speak to a real person, and we are committed to that. We use digital tools and AI for repetitive tasks, so we can spend more time on people. A team of 11 is at your service and we have no intention of making it smaller. See <a href="#team">our team</a>.</p>
+      </details>
+      <details class="faq-item">
         <summary>What happens if a tenant stops paying?</summary>
         <p>You don't face the procedure alone: we send reminders, issue formal notice and, if necessary, refer the matter to the justice of the peace on your behalf. See <a href="#benefits">what you gain from it</a>.</p>
       </details>
@@ -697,8 +795,8 @@
 <section class="final-cta" id="contact">
   <div class="final-cta-bg" role="img" aria-label="Belgian residential street"></div>
   <div class="wrap">
-    <h2>Trust the management of your property to a team already handling 1,100.</h2>
-    <p>Response within 48h. No obligation.</p>
+    <h2>Trust the management of your property to a team of 11 people already handling 1,100.</h2>
+    <p>A real person replies within 48h. No obligation.</p>
     <a href="mailto:beheer@exyro.be?subject=Rental%20management%20request" class="btn btn-primary">Write to EXYRO</a>
   </div>
 </section>
@@ -716,6 +814,7 @@
       <strong style="color:#fff">Navigation</strong>
       <a href="#benefits">Why outsource</a>
       <a href="#solution">How it works</a>
+      <a href="#team">Our team</a>
       <a href="#assistant">AI assistant</a>
       <a href="https://app.exyro.be/en/my" target="_blank" rel="noopener">Client area</a>
     </div>

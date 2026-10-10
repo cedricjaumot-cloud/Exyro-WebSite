@@ -339,6 +339,43 @@
     .fcol-pair{grid-template-columns:1fr 1fr;gap:16px;}
     footer .wrap{gap:32px;}
   }
+
+  /* ---- Équipe / dimension humaine ---- */
+  .team{background:var(--offwhite);padding:100px 0;}
+  .team-top{display:grid;grid-template-columns:1.3fr 1fr;gap:56px;align-items:center;margin-bottom:48px;}
+  .team-top .section-eyebrow{color:var(--signal);}
+  .team-top h2{font-size:clamp(28px,4vw,42px);font-weight:800;line-height:1.15;color:var(--ardoise);margin-bottom:18px;}
+  .team-top p{font-size:16px;color:var(--acier);margin:0;}
+  .team-count{background:var(--ardoise);border-radius:16px;padding:34px 28px;color:#fff;text-align:center;}
+  .team-count .big{font-family:'Montserrat',sans-serif;font-weight:800;font-size:76px;line-height:1;color:var(--signal);}
+  .team-count .big-label{font-size:13px;color:#C9D3E0;margin:8px 0 22px;}
+  .people{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;}
+  .people svg{width:30px;height:30px;}
+  .team-cols{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+  .team-col{border-radius:16px;padding:34px 32px;}
+  .team-col.digital{background:#fff;border:1px solid rgba(30,45,66,.1);}
+  .team-col.human{background:var(--ciel);border:1px solid var(--signal);}
+  .team-col h3{font-size:18px;font-weight:800;color:var(--ardoise);margin-bottom:6px;}
+  .team-col .sub{font-size:13.5px;color:var(--acier);margin-bottom:20px;}
+  .team-col ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px;}
+  .team-col li{font-size:14px;color:var(--ardoise);display:flex;gap:12px;line-height:1.5;}
+  .team-col li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--signal);margin-top:7px;flex-shrink:0;}
+  .team-pledge{max-width:720px;margin:48px auto 0;text-align:center;}
+  .team-pledge p{font-size:17px;font-weight:600;color:var(--ardoise);line-height:1.55;margin-bottom:24px;}
+  @media (max-width:900px){
+    .team{padding:70px 0;}
+    .team-top{grid-template-columns:1fr;gap:32px;}
+    .team-cols{grid-template-columns:1fr;}
+  }
+  .navlinks a,.navcta{white-space:nowrap;}
+  .navlinks{gap:26px;}
+  @media (max-width:1180px){
+    .navlinks{display:none;}
+    .navcta-ghost{display:none;}
+    .lang-switch{display:none;}
+    .burger{display:flex;}
+    .nav-right{gap:10px;}
+  }
   @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto;}.typing span{animation:none;}}
 </style>
 </head>
@@ -352,6 +389,7 @@
     <div class="navlinks">
       <a href="#voordelen">Waarom uitbesteden</a>
       <a href="#oplossing">Hoe het werkt</a>
+      <a href="#team">Ons team</a>
       <a href="#assistent">AI-assistent</a>
       <a href="#faq">FAQ</a>
     </div>
@@ -369,6 +407,7 @@
   <div class="mobile-menu" id="mobileMenu">
     <a href="#voordelen">Waarom uitbesteden</a>
     <a href="#oplossing">Hoe het werkt</a>
+    <a href="#team">Ons team</a>
     <a href="#assistent">AI-assistent</a>
     <a href="#faq">FAQ</a>
     <a href="https://app.exyro.be/nl/my" target="_blank" rel="noopener">Klantenzone</a>
@@ -384,7 +423,7 @@
   <div class="wrap">
     <span class="eyebrow">Verhuurbeheer, heel België</span>
     <h1>Uw verhuurd pand,<span class="rotator" id="rotator">beschermd.</span></h1>
-    <p class="lead">Vergeten indexering, onbetaalde huur, betwiste plaatsbeschrijving: een pand alleen beheren kost u tijd die u niet heeft, en soms meer dan professioneel beheer. EXYRO beheert al 1.100 huurcontracten in heel België, met één aanspreekpunt voor uw volledige portefeuille.</p>
+    <p class="lead">Vergeten indexering, onbetaalde huur, betwiste plaatsbeschrijving: een pand alleen beheren kost u tijd die u niet heeft, en soms meer dan professioneel beheer. EXYRO is een team van 11 mensen dat al 1.100 huurcontracten in heel België beheert. Digitale tools winnen tijd, en die tijd gaat naar wat telt: luisteren naar u en uw huurders.</p>
     <div class="cta-row">
       <a href="#contact" class="btn btn-primary">Mijn pand uitbesteden aan EXYRO</a>
       <a href="#oplossing" class="btn btn-ghost">Bekijk hoe het werkt</a>
@@ -416,7 +455,7 @@
       </div>
       <div class="pain-card">
         <div class="num">1 telefoontje</div>
-        <h3>Ook bij een incident</h3>
+        <h3>En er neemt een echt persoon op</h3>
         <p>Als een huurder niet meer betaalt, doorloopt u de procedure niet alleen: ons team behartigt dit voor u, van de eerste herinnering tot de oplossing.</p>
       </div>
     </div>
@@ -461,6 +500,7 @@
           <li>Elke wettelijke verhoging toegepast op de verjaardag van uw huurovereenkomst</li>
           <li>Uw schadegeval gemeld en opgevolgd tot vergoeding</li>
           <li>Uw plaatsbeschrijving bij vertrek en de vrijgave van de huurwaarborg, voor u geregeld</li>
+          <li>Uw stem gehoord op de algemene vergaderingen van mede-eigenaars: wij vertegenwoordigen u</li>
         </ul>
       </div>
     </div>
@@ -518,10 +558,11 @@
         <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1000&q=70" alt="Onderhoud en waardevermeerdering van een verhuurd pand" loading="lazy">
       </div>
       <div class="text-col">
-        <span class="step-num">04 - ONDERHOUD & WAARDEVERMEERDERING</span>
-        <h3>Onderhoud dat rendement dient, niet enkel comfort.</h3>
-        <p>Slijtage, kleine herstellingen, gerichte verbeteringen: wij volgen de staat van uw pand op over de tijd en stellen enkel een ingreep voor wanneer die economisch zinvol is, voor uw huur én voor de verkoopwaarde.</p>
+        <span class="step-num">04 - DIAGNOSE, ONDERHOUD & WAARDEVERMEERDERING</span>
+        <h3>Weten wat u morgen moet doen, daarna onderhoud dat rendement dient.</h3>
+        <p>Onze vastgoeddiagnosetool verzamelt de gegevens van uw pand of uw patrimonium, en een persoon van het team neemt de tijd om ze samen met u te analyseren. Daarna volgen wij de staat van uw pand op over de tijd en stellen enkel een ingreep voor wanneer die economisch zinvol is, voor uw huur én voor de verkoopwaarde.</p>
         <ul>
+          <li>Een diagnose van uw pand, samen met u besproken: u weet wat er moet gebeuren, en in welke volgorde</li>
           <li>Preventieve opvolging van de staat van het pand, niet enkel noodgevallen</li>
           <li>Elke investering becijferd: verwachte impact op huur én op de waarde van het pand</li>
           <li>Geen enkele uitgave zonder uw voorafgaande goedkeuring</li>
@@ -581,6 +622,54 @@
   </div>
 </section>
 
+<section class="team" id="team">
+  <div class="wrap">
+    <div class="team-top">
+      <div>
+        <span class="section-eyebrow">Ons team</span>
+        <h2>11 mensen, en niet van plan er minder te worden.</h2>
+        <p>Wij gebruiken digitale tools en AI om één reden: tijd winnen op de administratie, zodat we meer tijd hebben voor wat echt telt, de relatie met onze eigenaars en huurders. Het vervangt de mens niet, het geeft hem weer ruimte.</p>
+      </div>
+      <div class="team-count">
+        <div class="big">11</div>
+        <div class="big-label">mensen in het EXYRO-team</div>
+        <div class="people" role="img" aria-label="Elf mensen"><svg viewBox="0 0 24 24" fill="#2C7BE5" aria-hidden="true"><circle cx="12" cy="7.5" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8z"/></svg><svg viewBox="0 0 24 24" fill="#2C7BE5" aria-hidden="true"><circle cx="12" cy="7.5" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8z"/></svg><svg viewBox="0 0 24 24" fill="#2C7BE5" aria-hidden="true"><circle cx="12" cy="7.5" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8z"/></svg><svg viewBox="0 0 24 24" fill="#2C7BE5" aria-hidden="true"><circle cx="12" cy="7.5" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8z"/></svg><svg viewBox="0 0 24 24" fill="#2C7BE5" aria-hidden="true"><circle cx="12" cy="7.5" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8z"/></svg><svg viewBox="0 0 24 24" fill="#2C7BE5" aria-hidden="true"><circle cx="12" cy="7.5" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8z"/></svg><svg viewBox="0 0 24 24" fill="#2C7BE5" aria-hidden="true"><circle cx="12" cy="7.5" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8z"/></svg><svg viewBox="0 0 24 24" fill="#2C7BE5" aria-hidden="true"><circle cx="12" cy="7.5" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8z"/></svg><svg viewBox="0 0 24 24" fill="#2C7BE5" aria-hidden="true"><circle cx="12" cy="7.5" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8z"/></svg><svg viewBox="0 0 24 24" fill="#2C7BE5" aria-hidden="true"><circle cx="12" cy="7.5" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8z"/></svg><svg viewBox="0 0 24 24" fill="#2C7BE5" aria-hidden="true"><circle cx="12" cy="7.5" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8z"/></svg></div>
+      </div>
+    </div>
+    <!-- Portraits de l'équipe : à ajouter ici lorsque les photos seront disponibles -->
+    <div class="team-cols">
+      <div class="team-col digital">
+        <h3>Wat digitaal wordt afgehandeld</h3>
+        <div class="sub">Het repetitieve werk, zodat niemand er tijd aan verliest.</div>
+        <ul>
+          <li>Huurkwitanties, herinneringen en indexeringen automatisch voorbereid</li>
+          <li>Documenten geordend en online beschikbaar</li>
+          <li>Rapporten en cijfers bijgewerkt zonder dubbel invoeren</li>
+          <li>Gegevens van uw pand verzameld en geanalyseerd door onze diagnosetool</li>
+          <li>Wettelijke monitoring en routinecontroles</li>
+        </ul>
+      </div>
+      <div class="team-col human">
+        <h3>Wat in menselijke handen blijft</h3>
+        <div class="sub">Alles wat luisteren, begrijpen en beslissen vraagt.</div>
+        <ul>
+          <li>De tijd nemen om uw patrimonium of een specifiek pand te evalueren en samen met u te bepalen wat morgen te doen</li>
+          <li>U vertegenwoordigen op de algemene vergaderingen van mede-eigenaars en er uw stem laten horen</li>
+          <li>Luisteren naar een eigenaar die twijfelt om te verhuren</li>
+          <li>Een huurder geruststellen die een moeilijke periode doormaakt</li>
+          <li>Elkaar ontmoeten, bezoeken en de plaatsbeschrijving ter plaatse opmaken</li>
+          <li>In gesprek gaan met een huurder in moeilijkheden vóór het tot een procedure komt</li>
+          <li>Adviseren, afwegen en beslissen</li>
+        </ul>
+      </div>
+    </div>
+    <div class="team-pledge">
+      <p>Onze belofte: elk uur dat de tools ons besparen, investeren we in de relatie met u en met uw huurders. Het team krimpt niet, het richt zich op de essentie.</p>
+      <a href="#contact" class="btn btn-primary">Praat met het team</a>
+    </div>
+  </div>
+</section>
+
 <section class="testi">
   <div class="wrap">
     <div class="testi-head">
@@ -626,7 +715,7 @@
     </div>
     <div class="ai-shell">
       <div class="ai-info">
-        <span class="tag">Démo</span>
+        <span class="tag">Demo</span>
         <h3>Investeren, ja. Alles zelf beheren, niet per se.</h3>
         <p>Verhuurvastgoed blijft een van de meest toegankelijke beleggingen in België. Maar de huurwetgeving verschilt per Gewest en wijzigt elk jaar: een indexeringsfout of een verkeerd geformuleerde opzegging kost vaak meer dan professioneel beheer, en knabbelt rechtstreeks aan uw rendement.</p>
         <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
@@ -634,10 +723,11 @@
           <li style="font-size:13px;color:#C9D3E0;display:flex;gap:10px;"><span style="width:6px;height:6px;border-radius:50%;background:var(--signal);margin-top:6px;flex-shrink:0;"></span>Doorlopende juridische en fiscale opvolging</li>
           <li style="font-size:13px;color:#C9D3E0;display:flex;gap:10px;"><span style="width:6px;height:6px;border-radius:50%;background:var(--signal);margin-top:6px;flex-shrink:0;"></span>Documenten centraal en online toegankelijk</li>
         </ul>
+        <p style="margin:22px 0 0;font-size:13px;">Deze assistent beantwoordt algemene vragen op elk uur. Voor uw situatie neemt een persoon van het team het over.</p>
       </div>
       <div class="chat">
         <div class="chat-log" id="chatLog">
-          <div class="msg bot">Hallo, ik ben de vastgoedassistent van EXYRO. Investeren, rendement, fiscaliteit, verhuurbeheer: stel me een vraag over vastgoed in België, of kies hieronder een onderwerp.</div>
+          <div class="msg bot">Hallo, ik ben de vastgoedassistent van EXYRO. Investeren, rendement, fiscaliteit, verhuurbeheer: stel me een vraag over vastgoed in België, of kies hieronder een onderwerp. Voor uw dossier antwoordt een persoon van het team.</div>
         </div>
         <div class="suggestions" id="suggestions">
           <span class="chip" data-q="debuter">Starten met beleggen</span>
@@ -671,6 +761,14 @@
     </div>
     <div class="faq-list">
       <details class="faq-item">
+        <summary>Wie vertegenwoordigt mij op de algemene vergaderingen van mede-eigenaars?</summary>
+        <p>Wij. EXYRO vertegenwoordigt u op de algemene vergaderingen van mede-eigenaars en laat daar uw stem horen, zodat u zich niet hoeft te verplaatsen. Zie <a href="#oplossing">wat wij voor u regelen</a>.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Is alles geautomatiseerd? Spreek ik met een echt persoon?</summary>
+        <p>Ja, u spreekt met een echt persoon, en daar houden we aan vast. We gebruiken digitale tools en AI voor het repetitieve werk, om meer tijd te hebben voor mensen. Een team van 11 mensen staat voor u klaar en we zijn niet van plan het te verkleinen. Zie <a href="#team">ons team</a>.</p>
+      </details>
+      <details class="faq-item">
         <summary>Wat gebeurt er als een huurder stopt met betalen?</summary>
         <p>U doorloopt de procedure niet alleen: wij sturen herinneringen, stellen in gebreke en dagvaarden indien nodig namens u voor de vrederechter. Zie <a href="#voordelen">wat u hierbij wint</a>.</p>
       </details>
@@ -697,8 +795,8 @@
 <section class="final-cta" id="contact">
   <div class="final-cta-bg" role="img" aria-label="Belgische woonstraat"></div>
   <div class="wrap">
-    <h2>Vertrouw het beheer van uw pand toe aan een team dat er al 1.100 beheert.</h2>
-    <p>Antwoord binnen 48u. Vrijblijvend.</p>
+    <h2>Vertrouw het beheer van uw pand toe aan een team van 11 mensen dat er al 1.100 beheert.</h2>
+    <p>Een echt persoon antwoordt binnen 48u. Vrijblijvend.</p>
     <a href="mailto:beheer@exyro.be?subject=Aanvraag%20verhuurbeheer" class="btn btn-primary">Schrijf naar EXYRO</a>
   </div>
 </section>
@@ -716,6 +814,7 @@
       <strong style="color:#fff">Navigatie</strong>
       <a href="#voordelen">Waarom uitbesteden</a>
       <a href="#oplossing">Hoe het werkt</a>
+      <a href="#team">Ons team</a>
       <a href="#assistent">AI-assistent</a>
       <a href="https://app.exyro.be/nl/my" target="_blank" rel="noopener">Klantenzone</a>
     </div>

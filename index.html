@@ -339,6 +339,43 @@
     .fcol-pair{grid-template-columns:1fr 1fr;gap:16px;}
     footer .wrap{gap:32px;}
   }
+
+  /* ---- Équipe / dimension humaine ---- */
+  .team{background:var(--offwhite);padding:100px 0;}
+  .team-top{display:grid;grid-template-columns:1.3fr 1fr;gap:56px;align-items:center;margin-bottom:48px;}
+  .team-top .section-eyebrow{color:var(--signal);}
+  .team-top h2{font-size:clamp(28px,4vw,42px);font-weight:800;line-height:1.15;color:var(--ardoise);margin-bottom:18px;}
+  .team-top p{font-size:16px;color:var(--acier);margin:0;}
+  .team-count{background:var(--ardoise);border-radius:16px;padding:34px 28px;color:#fff;text-align:center;}
+  .team-count .big{font-family:'Montserrat',sans-serif;font-weight:800;font-size:76px;line-height:1;color:var(--signal);}
+  .team-count .big-label{font-size:13px;color:#C9D3E0;margin:8px 0 22px;}
+  .people{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;}
+  .people svg{width:30px;height:30px;}
+  .team-cols{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+  .team-col{border-radius:16px;padding:34px 32px;}
+  .team-col.digital{background:#fff;border:1px solid rgba(30,45,66,.1);}
+  .team-col.human{background:var(--ciel);border:1px solid var(--signal);}
+  .team-col h3{font-size:18px;font-weight:800;color:var(--ardoise);margin-bottom:6px;}
+  .team-col .sub{font-size:13.5px;color:var(--acier);margin-bottom:20px;}
+  .team-col ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px;}
+  .team-col li{font-size:14px;color:var(--ardoise);display:flex;gap:12px;line-height:1.5;}
+  .team-col li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--signal);margin-top:7px;flex-shrink:0;}
+  .team-pledge{max-width:720px;margin:48px auto 0;text-align:center;}
+  .team-pledge p{font-size:17px;font-weight:600;color:var(--ardoise);line-height:1.55;margin-bottom:24px;}
+  @media (max-width:900px){
+    .team{padding:70px 0;}
+    .team-top{grid-template-columns:1fr;gap:32px;}
+    .team-cols{grid-template-columns:1fr;}
+  }
+  .navlinks a,.navcta{white-space:nowrap;}
+  .navlinks{gap:26px;}
+  @media (max-width:1180px){
+    .navlinks{display:none;}
+    .navcta-ghost{display:none;}
+    .lang-switch{display:none;}
+    .burger{display:flex;}
+    .nav-right{gap:10px;}
+  }
   @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto;}.typing span{animation:none;}}
 </style>
 </head>
@@ -352,6 +389,7 @@
     <div class="navlinks">
       <a href="#avantages">Pourquoi déléguer</a>
       <a href="#solution">Comment ça marche</a>
+      <a href="#equipe">Notre équipe</a>
       <a href="#assistant">Assistant IA</a>
       <a href="#faq">FAQ</a>
     </div>
@@ -369,6 +407,7 @@
   <div class="mobile-menu" id="mobileMenu">
     <a href="#avantages">Pourquoi déléguer</a>
     <a href="#solution">Comment ça marche</a>
+    <a href="#equipe">Notre équipe</a>
     <a href="#assistant">Assistant IA</a>
     <a href="#faq">FAQ</a>
     <a href="https://app.exyro.be/fr/my" target="_blank" rel="noopener">Espace client</a>
@@ -384,7 +423,7 @@
   <div class="wrap">
     <span class="eyebrow">Gestion locative, Belgique entière</span>
     <h1>Votre bien loué,<span class="rotator" id="rotator">protégé.</span></h1>
-    <p class="lead">Indexation oubliée, loyer impayé, état des lieux contesté : gérer un bien seul vous coûte du temps que vous n'avez pas, et parfois plus cher qu'une gestion professionnelle. EXYRO gère déjà 1 100 baux à travers la Belgique, avec un seul interlocuteur pour tout votre portefeuille.</p>
+    <p class="lead">Indexation oubliée, loyer impayé, état des lieux contesté : gérer un bien seul vous coûte du temps que vous n'avez pas, et parfois plus cher qu'une gestion professionnelle. EXYRO, c'est une équipe de 11 personnes qui gère déjà 1 100 baux à travers la Belgique. Le digital nous fait gagner du temps, et ce temps est consacré à ce qui compte : vous écouter, vous et vos locataires.</p>
     <div class="cta-row">
       <a href="#contact" class="btn btn-primary">Déléguer mon bien à EXYRO</a>
       <a href="#solution" class="btn btn-ghost">Voir comment ça marche</a>
@@ -416,7 +455,7 @@
       </div>
       <div class="pain-card">
         <div class="num">1 seul appel</div>
-        <h3>Même en cas d'incident</h3>
+        <h3>Et c'est une vraie personne qui répond</h3>
         <p>Si un locataire cesse de payer, vous n'affrontez pas la procédure seul : notre équipe la mène pour vous, du premier rappel jusqu'à la solution.</p>
       </div>
     </div>
@@ -461,6 +500,7 @@
           <li>Chaque hausse légale appliquée à la date anniversaire de votre bail</li>
           <li>Votre sinistre déclaré et suivi jusqu'à indemnisation</li>
           <li>Votre état des lieux de sortie et la libération de la garantie, gérés pour vous</li>
+          <li>Votre voix portée aux assemblées générales de copropriétaires : nous vous y représentons</li>
         </ul>
       </div>
     </div>
@@ -518,10 +558,11 @@
         <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1000&q=70" alt="Entretien et valorisation d'un bien locatif" loading="lazy">
       </div>
       <div class="text-col">
-        <span class="step-num">04 - ENTRETIEN & VALORISATION</span>
-        <h3>Un entretien pensé pour la rentabilité, pas juste pour le confort.</h3>
-        <p>Usure du temps, petites réparations, améliorations ciblées : nous suivons l'état de votre bien dans la durée et ne proposons une intervention que lorsqu'elle a un sens économique, pour votre loyer comme pour la valeur de revente.</p>
+        <span class="step-num">04 - DIAGNOSTIC, ENTRETIEN & VALORISATION</span>
+        <h3>Savoir quoi faire demain, puis un entretien pensé pour la rentabilité.</h3>
+        <p>Notre outil de diagnostic immobilier rassemble les données de votre bien ou de votre patrimoine, et une personne de l'équipe prend le temps de les analyser avec vous. Ensuite, nous suivons l'état de votre bien dans la durée et ne proposons une intervention que lorsqu'elle a un sens économique, pour votre loyer comme pour la valeur de revente.</p>
         <ul>
+          <li>Un diagnostic de votre bien, commenté avec vous : vous savez ce qu'il faut faire, et dans quel ordre</li>
           <li>Suivi préventif de l'état du bien, pas seulement des urgences</li>
           <li>Chaque investissement chiffré : impact attendu sur le loyer et sur la valeur du bien</li>
           <li>Aucune dépense engagée sans votre validation préalable</li>
@@ -581,6 +622,54 @@
   </div>
 </section>
 
+<section class="team" id="equipe">
+  <div class="wrap">
+    <div class="team-top">
+      <div>
+        <span class="section-eyebrow">Notre équipe</span>
+        <h2>11 personnes, et aucune intention d'en avoir moins.</h2>
+        <p>Nous utilisons le digital et l'IA pour une seule raison : gagner du temps sur l'administratif, afin d'en consacrer davantage à ce qui compte vraiment, la relation avec nos propriétaires et nos locataires. Cela ne remplace pas l'humain, cela lui redonne de la place.</p>
+      </div>
+      <div class="team-count">
+        <div class="big">11</div>
+        <div class="big-label">personnes dans l'équipe EXYRO</div>
+        <div class="people" role="img" aria-label="Onze personnes"><svg viewBox="0 0 24 24" fill="#2C7BE5" aria-hidden="true"><circle cx="12" cy="7.5" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8z"/></svg><svg viewBox="0 0 24 24" fill="#2C7BE5" aria-hidden="true"><circle cx="12" cy="7.5" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8z"/></svg><svg viewBox="0 0 24 24" fill="#2C7BE5" aria-hidden="true"><circle cx="12" cy="7.5" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8z"/></svg><svg viewBox="0 0 24 24" fill="#2C7BE5" aria-hidden="true"><circle cx="12" cy="7.5" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8z"/></svg><svg viewBox="0 0 24 24" fill="#2C7BE5" aria-hidden="true"><circle cx="12" cy="7.5" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8z"/></svg><svg viewBox="0 0 24 24" fill="#2C7BE5" aria-hidden="true"><circle cx="12" cy="7.5" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8z"/></svg><svg viewBox="0 0 24 24" fill="#2C7BE5" aria-hidden="true"><circle cx="12" cy="7.5" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8z"/></svg><svg viewBox="0 0 24 24" fill="#2C7BE5" aria-hidden="true"><circle cx="12" cy="7.5" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8z"/></svg><svg viewBox="0 0 24 24" fill="#2C7BE5" aria-hidden="true"><circle cx="12" cy="7.5" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8z"/></svg><svg viewBox="0 0 24 24" fill="#2C7BE5" aria-hidden="true"><circle cx="12" cy="7.5" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8z"/></svg><svg viewBox="0 0 24 24" fill="#2C7BE5" aria-hidden="true"><circle cx="12" cy="7.5" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8z"/></svg></div>
+      </div>
+    </div>
+    <!-- Portraits de l'équipe : à ajouter ici lorsque les photos seront disponibles -->
+    <div class="team-cols">
+      <div class="team-col digital">
+        <h3>Ce que le digital prend en charge</h3>
+        <div class="sub">Le répétitif, pour que personne n'y perde son temps.</div>
+        <ul>
+          <li>Quittances, relances et indexations préparées automatiquement</li>
+          <li>Documents classés et accessibles en ligne</li>
+          <li>Rapports et chiffres mis à jour sans ressaisie</li>
+          <li>Données de votre bien rassemblées et analysées par notre outil de diagnostic</li>
+          <li>Veille légale et vérifications de routine</li>
+        </ul>
+      </div>
+      <div class="team-col human">
+        <h3>Ce qui reste entre des mains humaines</h3>
+        <div class="sub">Tout ce qui demande d'écouter, de comprendre et de décider.</div>
+        <ul>
+          <li>Prendre le temps d'évaluer votre patrimoine ou un bien en particulier, et de définir avec vous quoi faire demain</li>
+          <li>Vous représenter aux assemblées générales de copropriétaires et y porter votre voix</li>
+          <li>Écouter un propriétaire qui hésite avant de louer</li>
+          <li>Rassurer un locataire qui traverse une période difficile</li>
+          <li>Se rencontrer, visiter et réaliser l'état des lieux sur place</li>
+          <li>Dialoguer avec un locataire en difficulté avant d'en arriver à une procédure</li>
+          <li>Conseiller, arbitrer et décider</li>
+        </ul>
+      </div>
+    </div>
+    <div class="team-pledge">
+      <p>Notre engagement : chaque heure gagnée grâce aux outils est réinvestie dans la relation avec vous et avec vos locataires. L'équipe ne se réduit pas, elle se concentre sur l'essentiel.</p>
+      <a href="#contact" class="btn btn-primary">Parler à l'équipe</a>
+    </div>
+  </div>
+</section>
+
 <section class="testi">
   <div class="wrap">
     <div class="testi-head">
@@ -634,10 +723,11 @@
           <li style="font-size:13px;color:#C9D3E0;display:flex;gap:10px;"><span style="width:6px;height:6px;border-radius:50%;background:var(--signal);margin-top:6px;flex-shrink:0;"></span>Veille légale et fiscale assurée en continu</li>
           <li style="font-size:13px;color:#C9D3E0;display:flex;gap:10px;"><span style="width:6px;height:6px;border-radius:50%;background:var(--signal);margin-top:6px;flex-shrink:0;"></span>Documents centralisés, accessibles en ligne</li>
         </ul>
+        <p style="margin:22px 0 0;font-size:13px;">Cet assistant répond aux questions générales à toute heure. Pour votre situation, c'est une personne de l'équipe qui prend le relais.</p>
       </div>
       <div class="chat">
         <div class="chat-log" id="chatLog">
-          <div class="msg bot">Bonjour, je suis l'assistant immobilier EXYRO. Investissement, rendement, fiscalité, gestion locative : posez-moi une question sur l'immobilier en Belgique, ou choisissez un sujet ci-dessous.</div>
+          <div class="msg bot">Bonjour, je suis l'assistant immobilier EXYRO. Investissement, rendement, fiscalité, gestion locative : posez-moi une question sur l'immobilier en Belgique, ou choisissez un sujet ci-dessous. Pour votre dossier, une personne de l'équipe vous répond.</div>
         </div>
         <div class="suggestions" id="suggestions">
           <span class="chip" data-q="debuter">Se lancer dans l'investissement</span>
@@ -671,6 +761,14 @@
     </div>
     <div class="faq-list">
       <details class="faq-item">
+        <summary>Qui me représente aux assemblées générales de copropriétaires ?</summary>
+        <p>Nous. EXYRO vous représente aux assemblées générales de copropriétaires et y porte votre voix, afin que vous n'ayez pas à vous y déplacer. Voir <a href="#solution">ce que nous faisons à votre place</a>.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Tout est-il automatisé ? Vais-je parler à une vraie personne ?</summary>
+        <p>Oui, vous parlerez à une vraie personne, et nous y tenons. Nous utilisons le digital et l'IA pour les tâches répétitives, afin de consacrer plus de temps aux personnes. Une équipe de 11 personnes est à votre disposition et nous n'avons aucune intention de la réduire. Voir <a href="#equipe">notre équipe</a>.</p>
+      </details>
+      <details class="faq-item">
         <summary>Que se passe-t-il si un locataire arrête de payer ?</summary>
         <p>Vous n'affrontez pas la procédure seul : nous relançons, mettons en demeure et, si nécessaire, saisissons le juge de paix en votre nom. Voir le détail dans <a href="#avantages">ce que vous y gagnez</a>.</p>
       </details>
@@ -697,8 +795,8 @@
 <section class="final-cta" id="contact">
   <div class="final-cta-bg" role="img" aria-label="Rue résidentielle belge"></div>
   <div class="wrap">
-    <h2>Confiez la gestion de votre bien à une équipe qui en gère déjà 1 100.</h2>
-    <p>Réponse sous 48h. Sans engagement.</p>
+    <h2>Confiez la gestion de votre bien à une équipe de 11 personnes qui en gère déjà 1 100.</h2>
+    <p>Une vraie personne vous répond sous 48h. Sans engagement.</p>
     <a href="mailto:gestion@exyro.be?subject=Demande%20de%20gestion%20locative" class="btn btn-primary">Écrire à EXYRO</a>
   </div>
 </section>
@@ -716,6 +814,7 @@
       <strong style="color:#fff">Navigation</strong>
       <a href="#avantages">Pourquoi déléguer</a>
       <a href="#solution">Comment ça marche</a>
+      <a href="#equipe">Notre équipe</a>
       <a href="#assistant">Assistant IA</a>
       <a href="https://app.exyro.be/fr/my" target="_blank" rel="noopener">Espace client</a>
     </div>
