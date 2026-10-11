@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /worker/
+
+Sitemap: https://www.exyro.be/sitemap.xml
