@@ -404,6 +404,7 @@
   a.sup-card:hover{box-shadow:0 6px 16px rgba(30,45,66,.12);}
   @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto;}.typing span{animation:none;}}
 </style>
+<link rel="stylesheet" href="assets/lead.css">
 </head>
 <body>
 
@@ -817,8 +818,27 @@
   <div class="final-cta-bg" role="img" aria-label="Rue résidentielle belge"></div>
   <div class="wrap">
     <h2>Confiez la gestion de votre bien à une équipe de 11 personnes qui en gère déjà 1 100.</h2>
-    <p>Une vraie personne vous répond sous 48h. Sans engagement.</p>
-    <a href="mailto:gestion@exyro.be?subject=Demande%20de%20gestion%20locative" class="btn btn-primary">Écrire à EXYRO</a>
+    <p class="lead-intro">Une vraie personne vous répond sous 48h. Sans engagement.</p>
+    <div class="lead-card">
+      <form id="leadForm" novalidate data-lang="fr" data-mailto="gestion@exyro.be" data-subject="Demande de gestion locative"
+        data-required="Merci de renseigner votre nom, un e-mail valide, l'adresse du bien et d'accepter la politique de confidentialité." data-sending="Envoi en cours…" data-ko="L'envoi a échoué. Réessayez, ou écrivez-nous à gestion@exyro.be."
+        data-ok-title="Merci, votre demande est bien reçue." data-ok-text="Une vraie personne de l'équipe vous répond sous 48h.">
+        <div class="lead-grid">
+          <label>Nom et prénom<input type="text" name="name" autocomplete="name" required></label>
+          <label>E-mail<input type="email" name="email" autocomplete="email" required></label>
+          <label>Téléphone (facultatif)<input type="tel" name="phone" autocomplete="tel"></label>
+          <label>Adresse du bien<input type="text" name="address" autocomplete="street-address" placeholder="Rue, numéro, code postal, commune" required></label>
+          <label>Type de bien<select name="type"><option value="appartement">Appartement</option><option value="maison">Maison</option><option value="immeuble">Immeuble de rapport</option><option value="commerce">Commerce / bureau</option><option value="autre">Autre</option></select></label>
+          <label>Situation<select name="situation"><option value="reflexion">Je me renseigne</option><option value="loue">Déjà loué</option><option value="vacant">Vacant, à mettre en location</option><option value="achat">En cours d'achat</option></select></label>
+          <label class="full">Un mot sur votre projet (facultatif)<textarea name="message" rows="3"></textarea></label>
+        </div>
+        <label class="hp" aria-hidden="true">Website<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+        <label class="consent"><input type="checkbox" name="consent" required><span>J'accepte que EXYRO utilise ces informations pour répondre à ma demande, conformément à la <a href="legal/confidentialite.html">politique de confidentialité</a>.</span></label>
+        <button type="submit" class="btn btn-primary lead-submit">Envoyer ma demande</button>
+        <div class="lead-status" id="leadStatus" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+    <div class="lead-alt">Vous préférez nous écrire ? <a href="mailto:gestion@exyro.be">gestion@exyro.be</a></div>
   </div>
 </section>
 
@@ -901,5 +921,6 @@
   rotator.style.transition = 'opacity .25s ease';
 </script>
 <script src="assistant.js"></script>
+<script src="assets/lead.js"></script>
 </body>
 </html>

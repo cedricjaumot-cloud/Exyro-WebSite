@@ -404,6 +404,7 @@
   a.sup-card:hover{box-shadow:0 6px 16px rgba(30,45,66,.12);}
   @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto;}.typing span{animation:none;}}
 </style>
+<link rel="stylesheet" href="../assets/lead.css">
 </head>
 <body>
 
@@ -817,8 +818,27 @@
   <div class="final-cta-bg" role="img" aria-label="Belgian residential street"></div>
   <div class="wrap">
     <h2>Trust the management of your property to a team of 11 people already handling 1,100.</h2>
-    <p>A real person replies within 48h. No obligation.</p>
-    <a href="mailto:beheer@exyro.be?subject=Rental%20management%20request" class="btn btn-primary">Write to EXYRO</a>
+    <p class="lead-intro">A real person replies within 48h. No obligation.</p>
+    <div class="lead-card">
+      <form id="leadForm" novalidate data-lang="en" data-mailto="beheer@exyro.be" data-subject="Rental management request"
+        data-required="Please enter your name, a valid e-mail, the property address and accept the privacy policy." data-sending="Sending…" data-ko="Sending failed. Please try again, or write to us at beheer@exyro.be."
+        data-ok-title="Thank you, your request has been received." data-ok-text="A real person from the team replies within 48h.">
+        <div class="lead-grid">
+          <label>Full name<input type="text" name="name" autocomplete="name" required></label>
+          <label>E-mail<input type="email" name="email" autocomplete="email" required></label>
+          <label>Phone (optional)<input type="tel" name="phone" autocomplete="tel"></label>
+          <label>Property address<input type="text" name="address" autocomplete="street-address" placeholder="Street, number, postcode, town" required></label>
+          <label>Property type<select name="type"><option value="appartement">Apartment</option><option value="maison">House</option><option value="immeuble">Investment building</option><option value="commerce">Shop / office</option><option value="autre">Other</option></select></label>
+          <label>Situation<select name="situation"><option value="reflexion">I am gathering information</option><option value="loue">Already let</option><option value="vacant">Vacant, to be let</option><option value="achat">Purchase in progress</option></select></label>
+          <label class="full">A few words about your project (optional)<textarea name="message" rows="3"></textarea></label>
+        </div>
+        <label class="hp" aria-hidden="true">Website<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+        <label class="consent"><input type="checkbox" name="consent" required><span>I agree that EXYRO uses this information to answer my request, in accordance with the <a href="legal/confidentialite.html">privacy policy</a>.</span></label>
+        <button type="submit" class="btn btn-primary lead-submit">Send my request</button>
+        <div class="lead-status" id="leadStatus" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+    <div class="lead-alt">Prefer to write? <a href="mailto:beheer@exyro.be">beheer@exyro.be</a></div>
   </div>
 </section>
 
@@ -901,5 +921,6 @@
   rotator.style.transition = 'opacity .25s ease';
 </script>
 <script src="assistant-en.js"></script>
+<script src="../assets/lead.js"></script>
 </body>
 </html>

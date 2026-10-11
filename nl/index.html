@@ -404,6 +404,7 @@
   a.sup-card:hover{box-shadow:0 6px 16px rgba(30,45,66,.12);}
   @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto;}.typing span{animation:none;}}
 </style>
+<link rel="stylesheet" href="../assets/lead.css">
 </head>
 <body>
 
@@ -817,8 +818,27 @@
   <div class="final-cta-bg" role="img" aria-label="Belgische woonstraat"></div>
   <div class="wrap">
     <h2>Vertrouw het beheer van uw pand toe aan een team van 11 mensen dat er al 1.100 beheert.</h2>
-    <p>Een echt persoon antwoordt binnen 48u. Vrijblijvend.</p>
-    <a href="mailto:beheer@exyro.be?subject=Aanvraag%20verhuurbeheer" class="btn btn-primary">Schrijf naar EXYRO</a>
+    <p class="lead-intro">Een echt persoon antwoordt binnen 48u. Vrijblijvend.</p>
+    <div class="lead-card">
+      <form id="leadForm" novalidate data-lang="nl" data-mailto="beheer@exyro.be" data-subject="Aanvraag verhuurbeheer"
+        data-required="Vul uw naam, een geldig e-mailadres en het adres van het pand in, en ga akkoord met het privacybeleid." data-sending="Bezig met verzenden…" data-ko="Verzenden mislukt. Probeer opnieuw, of schrijf ons op beheer@exyro.be."
+        data-ok-title="Bedankt, we hebben uw aanvraag ontvangen." data-ok-text="Een echt persoon van het team antwoordt binnen 48u.">
+        <div class="lead-grid">
+          <label>Naam en voornaam<input type="text" name="name" autocomplete="name" required></label>
+          <label>E-mail<input type="email" name="email" autocomplete="email" required></label>
+          <label>Telefoon (optioneel)<input type="tel" name="phone" autocomplete="tel"></label>
+          <label>Adres van het pand<input type="text" name="address" autocomplete="street-address" placeholder="Straat, nummer, postcode, gemeente" required></label>
+          <label>Type pand<select name="type"><option value="appartement">Appartement</option><option value="maison">Woning</option><option value="immeuble">Opbrengsteigendom</option><option value="commerce">Handelspand / kantoor</option><option value="autre">Ander</option></select></label>
+          <label>Situatie<select name="situation"><option value="reflexion">Ik informeer me</option><option value="loue">Reeds verhuurd</option><option value="vacant">Leegstaand, te verhuren</option><option value="achat">Aankoop lopend</option></select></label>
+          <label class="full">Een woordje over uw project (optioneel)<textarea name="message" rows="3"></textarea></label>
+        </div>
+        <label class="hp" aria-hidden="true">Website<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+        <label class="consent"><input type="checkbox" name="consent" required><span>Ik ga ermee akkoord dat EXYRO deze gegevens gebruikt om mijn aanvraag te beantwoorden, overeenkomstig het <a href="legal/confidentialite.html">privacybeleid</a>.</span></label>
+        <button type="submit" class="btn btn-primary lead-submit">Mijn aanvraag versturen</button>
+        <div class="lead-status" id="leadStatus" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+    <div class="lead-alt">Liever schrijven? <a href="mailto:beheer@exyro.be">beheer@exyro.be</a></div>
   </div>
 </section>
 
@@ -901,5 +921,6 @@
   rotator.style.transition = 'opacity .25s ease';
 </script>
 <script src="assistant-nl.js"></script>
+<script src="../assets/lead.js"></script>
 </body>
 </html>
