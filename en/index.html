@@ -248,14 +248,20 @@
   .testi-head{max-width:640px;margin-bottom:52px;}
   .testi-head h2{font-size:clamp(26px,3.4vw,36px);font-weight:800;color:var(--ardoise);}
   .testi-head .note{font-size:12.5px;color:#96A2B3;margin-top:10px;font-style:italic;}
-  .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .testi-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:20px;}
+  .testi-card{grid-column:span 2;}
+  .testi-card.feat{grid-column:span 6;padding:36px 40px;}
+  .testi-card.feat .quote{font-size:18px;}
+  .testi-card.half{grid-column:span 3;}
   .testi-card{background:var(--offwhite);border-radius:14px;padding:30px 28px;border:1px solid rgba(30,45,66,.06);}
   .testi-card .quote{font-size:15px;color:var(--ardoise);line-height:1.6;margin-bottom:22px;}
   .testi-card{display:flex;flex-direction:column;position:relative;}
   .testi-card::before{content:"\201C";font-family:'Montserrat',sans-serif;font-weight:900;font-size:56px;line-height:.8;color:var(--signal);display:block;margin-bottom:4px;height:34px;}
   .testi-card .quote{flex:1;font-size:16px;}
-  .testi-card .who-label{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--acier);}
-  @media(max-width:900px){.testi-grid{grid-template-columns:1fr;}}
+  .testi-card .who{display:flex;flex-direction:column;gap:2px;}
+  .testi-card .who-name{font-size:14px;font-weight:700;color:var(--ardoise);}
+  .testi-card .who-role{font-size:12.5px;color:var(--acier);}
+  @media(max-width:900px){.testi-grid{grid-template-columns:1fr;}.testi-card,.testi-card.feat,.testi-card.half{grid-column:auto;}.testi-card.feat{padding:30px 28px;}.testi-card.feat .quote{font-size:16px;}}
 
   /* ---------- AI Assistant ---------- */
   .ai-shell{
@@ -742,17 +748,29 @@
       <h2>What our clients say.</h2>
     </div>
     <div class="testi-grid">
+      <div class="testi-card feat">
+        <p class="quote">I would like to express my sincere thanks for your professionalism, your availability and your exemplary follow-up of the repair work carried out on our terrace. Your efficiency, kindness and sense of service are rare and valuable. Thanks to your intervention, we have regained not only material comfort but also genuine peace of mind. […]</p>
+        <div class="who"><span class="who-name">M. H.</span><span class="who-role">Tenant in Jodoigne</span></div>
+      </div>
       <div class="testi-card">
         <p class="quote">Fast and efficient, thank you very much.</p>
-        <div class="who-label">EXYRO client</div>
+        <div class="who"><span class="who-name">Marc E.</span><span class="who-role">Owner in Mons</span></div>
       </div>
       <div class="testi-card">
-        <p class="quote">I have noted your email and thank you for the energy you put into this matter and for your dedication.</p>
-        <div class="who-label">EXYRO client</div>
+        <p class="quote">Thank you for following this up, and you are right to put pressure on those responsible. You have my full support.</p>
+        <div class="who"><span class="who-name">Philippe D.</span><span class="who-role">Owner in Messancy</span></div>
       </div>
       <div class="testi-card">
+        <p class="quote">Thank you, Ms Capelle, for supporting me.</p>
+        <div class="who"><span class="who-name">Jacques M.</span><span class="who-role">Owner in Mons</span></div>
+      </div>
+      <div class="testi-card half">
+        <p class="quote">I have noted your email and thank you for the energy you put into this matter and for your dedication. I am well aware of it.</p>
+        <div class="who"><span class="who-name">Cecile D.</span><span class="who-role">Owner in Arlon</span></div>
+      </div>
+      <div class="testi-card half">
         <p class="quote">Thank you very much for your support in this situation. Well done again on the result.</p>
-        <div class="who-label">EXYRO client</div>
+        <div class="who"><span class="who-name">Eric D.</span><span class="who-role">Owner in Jodoigne</span></div>
       </div>
     </div>
   </div>

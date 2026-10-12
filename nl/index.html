@@ -248,14 +248,20 @@
   .testi-head{max-width:640px;margin-bottom:52px;}
   .testi-head h2{font-size:clamp(26px,3.4vw,36px);font-weight:800;color:var(--ardoise);}
   .testi-head .note{font-size:12.5px;color:#96A2B3;margin-top:10px;font-style:italic;}
-  .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .testi-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:20px;}
+  .testi-card{grid-column:span 2;}
+  .testi-card.feat{grid-column:span 6;padding:36px 40px;}
+  .testi-card.feat .quote{font-size:18px;}
+  .testi-card.half{grid-column:span 3;}
   .testi-card{background:var(--offwhite);border-radius:14px;padding:30px 28px;border:1px solid rgba(30,45,66,.06);}
   .testi-card .quote{font-size:15px;color:var(--ardoise);line-height:1.6;margin-bottom:22px;}
   .testi-card{display:flex;flex-direction:column;position:relative;}
   .testi-card::before{content:"\201C";font-family:'Montserrat',sans-serif;font-weight:900;font-size:56px;line-height:.8;color:var(--signal);display:block;margin-bottom:4px;height:34px;}
   .testi-card .quote{flex:1;font-size:16px;}
-  .testi-card .who-label{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--acier);}
-  @media(max-width:900px){.testi-grid{grid-template-columns:1fr;}}
+  .testi-card .who{display:flex;flex-direction:column;gap:2px;}
+  .testi-card .who-name{font-size:14px;font-weight:700;color:var(--ardoise);}
+  .testi-card .who-role{font-size:12.5px;color:var(--acier);}
+  @media(max-width:900px){.testi-grid{grid-template-columns:1fr;}.testi-card,.testi-card.feat,.testi-card.half{grid-column:auto;}.testi-card.feat{padding:30px 28px;}.testi-card.feat .quote{font-size:16px;}}
 
   /* ---------- AI Assistant ---------- */
   .ai-shell{
@@ -742,17 +748,29 @@
       <h2>Wat onze klanten ervan zeggen.</h2>
     </div>
     <div class="testi-grid">
+      <div class="testi-card feat">
+        <p class="quote">Ik wil u mijn oprechte dank betuigen voor uw professionalisme, uw beschikbaarheid en uw voorbeeldige opvolging bij de herstelwerken aan ons terras. Uw doeltreffendheid, uw vriendelijkheid en uw dienstbaarheid zijn zeldzaam en kostbaar. Dankzij uw tussenkomst hebben we niet alleen ons materiële comfort teruggevonden, maar ook echte gemoedsrust. […]</p>
+        <div class="who"><span class="who-name">M. H.</span><span class="who-role">Huurder in Jodoigne</span></div>
+      </div>
       <div class="testi-card">
         <p class="quote">Snel en doeltreffend, hartelijk dank.</p>
-        <div class="who-label">Klant van EXYRO</div>
+        <div class="who"><span class="who-name">Marc E.</span><span class="who-role">Eigenaar in Mons</span></div>
       </div>
       <div class="testi-card">
-        <p class="quote">Ik neem nota van uw e-mail en dank u voor de energie die u in dit dossier hebt gestoken en voor uw toewijding.</p>
-        <div class="who-label">Klant van EXYRO</div>
+        <p class="quote">Dank voor uw opvolging, en u hebt gelijk om de nodige druk te zetten op wie het aangaat. U hebt al mijn steun.</p>
+        <div class="who"><span class="who-name">Philippe D.</span><span class="who-role">Eigenaar in Messancy</span></div>
       </div>
       <div class="testi-card">
+        <p class="quote">Dank u, mevrouw Capelle, voor uw steun.</p>
+        <div class="who"><span class="who-name">Jacques M.</span><span class="who-role">Eigenaar in Mons</span></div>
+      </div>
+      <div class="testi-card half">
+        <p class="quote">Ik neem nota van uw e-mail en dank u voor de energie die u in dit dossier hebt gestoken en voor uw toewijding. Ik ben me daar goed van bewust.</p>
+        <div class="who"><span class="who-name">Cecile D.</span><span class="who-role">Eigenaar in Arlon</span></div>
+      </div>
+      <div class="testi-card half">
         <p class="quote">Hartelijk dank voor uw steun in deze situatie. Nogmaals bravo voor het resultaat.</p>
-        <div class="who-label">Klant van EXYRO</div>
+        <div class="who"><span class="who-name">Eric D.</span><span class="who-role">Eigenaar in Jodoigne</span></div>
       </div>
     </div>
   </div>
