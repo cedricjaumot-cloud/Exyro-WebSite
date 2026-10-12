@@ -251,10 +251,11 @@
   .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
   .testi-card{background:var(--offwhite);border-radius:14px;padding:30px 28px;border:1px solid rgba(30,45,66,.06);}
   .testi-card .quote{font-size:15px;color:var(--ardoise);line-height:1.6;margin-bottom:22px;}
-  .testi-card .who{display:flex;align-items:center;gap:12px;}
-  .testi-card .avatar{width:40px;height:40px;border-radius:50%;object-fit:cover;flex-shrink:0;}
-  .testi-card .who-name{font-size:13.5px;font-weight:700;color:var(--ardoise);}
-  .testi-card .who-role{font-size:12px;color:var(--acier);}
+  .testi-card{display:flex;flex-direction:column;position:relative;}
+  .testi-card::before{content:"\201C";font-family:'Montserrat',sans-serif;font-weight:900;font-size:56px;line-height:.8;color:var(--signal);display:block;margin-bottom:4px;height:34px;}
+  .testi-card .quote{flex:1;font-size:16px;}
+  .testi-card .who-label{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--acier);}
+  @media(max-width:900px){.testi-grid{grid-template-columns:1fr;}}
 
   /* ---------- AI Assistant ---------- */
   .ai-shell{
@@ -730,6 +731,29 @@
     <div class="team-pledge">
       <p>Onze belofte: elk uur dat de tools ons besparen, investeren we in de relatie met u en met uw huurders. Het team krimpt niet, het richt zich op de essentie.</p>
       <a href="#contact" class="btn btn-primary">Praat met het team</a>
+    </div>
+  </div>
+</section>
+
+<section class="testi">
+  <div class="wrap">
+    <div class="testi-head">
+      <span class="section-eyebrow">Zij vertrouwen ons</span>
+      <h2>Wat onze klanten ervan zeggen.</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <p class="quote">Snel en doeltreffend, hartelijk dank.</p>
+        <div class="who-label">Klant van EXYRO</div>
+      </div>
+      <div class="testi-card">
+        <p class="quote">Ik neem nota van uw e-mail en dank u voor de energie die u in dit dossier hebt gestoken en voor uw toewijding.</p>
+        <div class="who-label">Klant van EXYRO</div>
+      </div>
+      <div class="testi-card">
+        <p class="quote">Hartelijk dank voor uw steun in deze situatie. Nogmaals bravo voor het resultaat.</p>
+        <div class="who-label">Klant van EXYRO</div>
+      </div>
     </div>
   </div>
 </section>

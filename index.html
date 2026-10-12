@@ -251,10 +251,11 @@
   .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
   .testi-card{background:var(--offwhite);border-radius:14px;padding:30px 28px;border:1px solid rgba(30,45,66,.06);}
   .testi-card .quote{font-size:15px;color:var(--ardoise);line-height:1.6;margin-bottom:22px;}
-  .testi-card .who{display:flex;align-items:center;gap:12px;}
-  .testi-card .avatar{width:40px;height:40px;border-radius:50%;object-fit:cover;flex-shrink:0;}
-  .testi-card .who-name{font-size:13.5px;font-weight:700;color:var(--ardoise);}
-  .testi-card .who-role{font-size:12px;color:var(--acier);}
+  .testi-card{display:flex;flex-direction:column;position:relative;}
+  .testi-card::before{content:"\201C";font-family:'Montserrat',sans-serif;font-weight:900;font-size:56px;line-height:.8;color:var(--signal);display:block;margin-bottom:4px;height:34px;}
+  .testi-card .quote{flex:1;font-size:16px;}
+  .testi-card .who-label{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--acier);}
+  @media(max-width:900px){.testi-grid{grid-template-columns:1fr;}}
 
   /* ---------- AI Assistant ---------- */
   .ai-shell{
@@ -730,6 +731,29 @@
     <div class="team-pledge">
       <p>Notre engagement : chaque heure gagnée grâce aux outils est réinvestie dans la relation avec vous et avec vos locataires. L'équipe ne se réduit pas, elle se concentre sur l'essentiel.</p>
       <a href="#contact" class="btn btn-primary">Parler à l'équipe</a>
+    </div>
+  </div>
+</section>
+
+<section class="testi">
+  <div class="wrap">
+    <div class="testi-head">
+      <span class="section-eyebrow">Ils nous font confiance</span>
+      <h2>Ce qu'en disent nos clients.</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <p class="quote">Rapidité et efficacité, merci beaucoup.</p>
+        <div class="who-label">Client EXYRO</div>
+      </div>
+      <div class="testi-card">
+        <p class="quote">Je prends bonne note de votre mail et vous remercie pour l'énergie dépensée dans ce dossier et votre dévouement.</p>
+        <div class="who-label">Client EXYRO</div>
+      </div>
+      <div class="testi-card">
+        <p class="quote">Un grand merci pour votre soutien dans cette situation. Encore bravo pour le résultat.</p>
+        <div class="who-label">Client EXYRO</div>
+      </div>
     </div>
   </div>
 </section>
